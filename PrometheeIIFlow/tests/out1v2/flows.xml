@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:XMCDA xmlns:ns2="http://www.decision-deck.org/2016/XMCDA-2.2.2">
+    <alternativesValues>
+        <alternativeValue>
+            <alternativeID>A</alternativeID>
+            <value>
+                <real>0.4</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>B</alternativeID>
+            <value>
+                <real>0.6</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>C</alternativeID>
+            <value>
+                <real>0.1</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>pMG</alternativeID>
+            <value>
+                <real>0.5</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>pBM</alternativeID>
+            <value>
+                <real>0.0</real>
+            </value>
+        </alternativeValue>
+    </alternativesValues>
+</ns2:XMCDA>

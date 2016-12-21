@@ -1,0 +1,13 @@
+Copyright Sébastien Bigaret, Patrick Meyer, 2016
+
+Ce logiciel est une implémentation en Java de la somme pondérée (weighted sum)
+utilisant la bibliothèque XMCDA-java.
+
+Il est distribué sous la Licence Publique de l'Union européenne (EUPL) v1.1.
+
+Vous trouverez dans ce répertoire les versions anglaise et française de la
+licence.
+
+L'EUPL est disponible dans 22 langues officielles de l'Union européenne; pour
+plus d'informations, veuillez vous référer à son site web:
+https://joinup.ec.europa.eu/community/eupl/home

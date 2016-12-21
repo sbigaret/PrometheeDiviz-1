@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:XMCDA xmlns:ns2="http://www.decision-deck.org/2012/XMCDA-2.2.1">
+    <alternativesValues>
+        <alternativeValue>
+            <alternativeID>A</alternativeID>
+            <value id="LowerFlow">
+                <real>0.0997</real>
+            </value>
+            <value id="UpperFlow">
+                <real>0.167</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>B</alternativeID>
+            <value id="LowerFlow">
+                <real>0.184</real>
+            </value>
+            <value id="UpperFlow">
+                <real>0.2827</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>C</alternativeID>
+            <value id="LowerFlow">
+                <real>0.1098</real>
+            </value>
+            <value id="UpperFlow">
+                <real>0.2235</real>
+            </value>
+        </alternativeValue>
+    </alternativesValues>
+</ns2:XMCDA>

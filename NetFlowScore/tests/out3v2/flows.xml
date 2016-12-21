@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:XMCDA xmlns:ns2="http://www.decision-deck.org/2012/XMCDA-2.2.1">
+    <alternativesValues>
+        <alternativeValue>
+            <alternativeID>A</alternativeID>
+            <value>
+                <real>1.0</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>B</alternativeID>
+            <value>
+                <real>0.7</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>C</alternativeID>
+            <value>
+                <real>0.9</real>
+            </value>
+        </alternativeValue>
+    </alternativesValues>
+</ns2:XMCDA>

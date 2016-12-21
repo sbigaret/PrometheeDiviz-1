@@ -1,0 +1,15 @@
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2012/XMCDA-2.2.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<projectReference>
+		<comment>Test problem</comment>
+	</projectReference>
+
+	<alternatives>
+		<alternative id="A" name="A" />
+		<alternative id="B" name="B" />
+		<alternative id="C" name="C" />
+		<alternative id="D" name="D" />
+	</alternatives>
+
+</xmcda:XMCDA>
+  
