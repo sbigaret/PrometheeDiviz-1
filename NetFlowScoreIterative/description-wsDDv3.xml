@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="../../docs/w3-ws/specificationData/description.xsd">
-  <program provider="PUT" name="NetFlowScore" displayName="NetFlowScore" version="0.0.1" />
+  <program provider="PUT" name="NetFlowScoreIterative" displayName="NetFlowScoreIterative" version="0.0.1" />
   <documentation>
     <description>
-		Module for calculation of Net Flow Score.
+		Module for calculation of Net Flow Score in iterative way.
     </description>
-    <url>https://github.com/MagdalenaDziecielska/NetFlowScore</url>
+	  <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
+	  <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
   </documentation>
   <parameters>
 
@@ -86,9 +87,9 @@
 		</gui>
 	</input>
 
-    <output id="output1" name="flows" displayName="flows">
+    <output id="output1" name="ranking" displayName="ranking">
       <documentation>
-        <description>Final flows computed from the given data.</description>
+        <description>Final ranking computed from the given data.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </output>
