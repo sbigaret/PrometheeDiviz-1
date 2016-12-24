@@ -16,12 +16,7 @@ public class InputsHandler {
         public Map<String, Double> negativeFlow;
     }
 
-    /**
-     *
-     * @param xmcda
-     * @param xmcda_exec_results
-     * @return
-     */
+
     static public Inputs checkAndExtractInputs(XMCDA xmcda, ProgramExecutionResult xmcda_exec_results) throws ValueConverters.ConversionException {
         Inputs inputsDict = checkInputs(xmcda, xmcda_exec_results);
 
@@ -32,23 +27,16 @@ public class InputsHandler {
     }
 
 
-    /**
-     * Checks the inputs
-     *
-     * @param xmcda
-     * @param errors
-     * @return
-     */
     protected static Inputs checkInputs(XMCDA xmcda, ProgramExecutionResult errors)
     {
         Inputs inputs = new Inputs();
-        checkAlternatives(inputs, xmcda, errors);
-        checkAlternativesValues(inputs, xmcda, errors);
+        checkAlternatives(xmcda, errors);
+        checkAlternativesValues(xmcda, errors);
 
         return inputs;
     }
 
-    private static void checkAlternatives(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAlternatives(XMCDA xmcda, ProgramExecutionResult errors) {
 
         if (xmcda.alternatives.size() == 0) {
             errors.addError("No alternatives found");
@@ -60,7 +48,7 @@ public class InputsHandler {
         }
     }
 
-    private static void checkAlternativesValues(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAlternativesValues(XMCDA xmcda, ProgramExecutionResult errors) {
 
         if(xmcda.alternativesValuesList.size() == 0){
             errors.addError("No flows found");
@@ -92,10 +80,12 @@ public class InputsHandler {
                 alternatives_ids.add(alternative.id());
             }
         }
-        inputs.alternatives_ids = alternatives_ids;
+
         if (alternatives_ids.isEmpty()) {
             errors.addError("IDs are empty");
         }
+
+        inputs.alternatives_ids = alternatives_ids;
     }
 
     private static void extractFlows(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
@@ -118,10 +108,16 @@ public class InputsHandler {
                         positiveFlow.put(id, z);
                         iterator++;
                     }
+                    else {
+                        errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
+                    }
                 }
                 else if(inputs.alternatives_ids.contains(id)) {
                     negativeFlow.put(id, z);
                     iterator++;
+                }
+                else {
+                    errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
                 }
             }
         }
