@@ -18,37 +18,15 @@ public class InputsHandler {
             label = paramLabel;
         }
 
-        /**
-         * Return the label for this ComparisonWith Parameter
-         *
-         * @return the parameter's label
-         */
         public final String getLabel() {
             return label;
         }
 
-        /**
-         * Returns the parameter's label
-         *
-         * @return the parameter's label
-         */
         @Override
         public String toString() {
             return label;
         }
 
-        /**
-         * Returns the {@link ComparisonWithParam} with the specified label. It
-         * behaves like {@link #valueOf(String)} with the exception
-         *
-         * @param parameterLabel
-         *            the label of the constant to return
-         * @return the enum constant with the specified label
-         * @throws IllegalArgumentException
-         *             if there is no ComparisonWithParam with this label
-         * @throws NullPointerException
-         *             if parameterLabel is null
-         */
         public static ComparisonWithParam fromString(String parameterLabel) {
             if (parameterLabel == null)
                 throw new NullPointerException("parameterLabel is null");
@@ -61,10 +39,6 @@ public class InputsHandler {
     }
 
 
-    /**
-     * This class contains every element which are needed to compute the weighted sum.
-     * It is populated by {@link InputsHandler#checkAndExtractInputs(XMCDA, ProgramExecutionResult)}.
-     */
     public static class Inputs
     {
         public List<String> alternatives_ids;
@@ -81,12 +55,7 @@ public class InputsHandler {
     }
 
 
-    /**
-     *
-     * @param xmcda
-     * @param xmcda_exec_results
-     * @return Inputs
-     */
+
     static public Inputs checkAndExtractInputs(XMCDA xmcda, ProgramExecutionResult xmcda_exec_results) throws ValueConverters.ConversionException {
         Inputs inputsDict = checkInputs(xmcda, xmcda_exec_results);
 
@@ -97,19 +66,13 @@ public class InputsHandler {
     }
 
 
-    /**
-     * Checks the inputs
-     *
-     * @param xmcda
-     * @param errors
-     * @return Inputs
-     */
+
     protected static Inputs checkInputs(XMCDA xmcda, ProgramExecutionResult errors)
     {
         Inputs inputs = new Inputs();
         checkAlternatives(inputs, xmcda, errors);
         checkAlternativesValues(inputs, xmcda, errors);
-        checkParameters(inputs, xmcda, errors);
+        checkAndExtractParameters(inputs, xmcda, errors);
         checkCategoriesProfiles(inputs, xmcda, errors);
 
         return inputs;
@@ -134,7 +97,7 @@ public class InputsHandler {
     }
 
 
-    private static void checkParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAndExtractParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
         ComparisonWithParam comparisonWith = null;
 
         if (xmcda.programParametersList.size() > 1) {
@@ -226,10 +189,11 @@ public class InputsHandler {
             }
         }
 
-        inputs.alternatives_ids = alternatives_ids;
         if (alternatives_ids.isEmpty()) {
             errors.addError("IDs are empty");
         }
+
+        inputs.alternatives_ids = alternatives_ids;
     }
 
     private static void extractFlows(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
@@ -253,9 +217,15 @@ public class InputsHandler {
                             positiveFlow.put(id, z);
                             iterator++;
                         }
+                        else {
+                            errors.addError("You have alternative/profile in your flows that is not in your input file with alternatives/profiles. Check this out.");
+                        }
                     } else if (inputs.alternatives_ids.contains(id)) {
                         negativeFlow.put(id, z);
                         iterator++;
+                    }
+                    else {
+                        errors.addError("You have alternative/profile in your flows that is not in your input file with alternatives/profiles. Check this out.");
                     }
                 }
                 else {
@@ -264,9 +234,15 @@ public class InputsHandler {
                             positiveFlow.put(id, z);
                             iterator++;
                         }
+                        else {
+                            errors.addError("You have alternative/profile in your flows that is not in your input file with alternatives/profiles. Check this out.");
+                        }
                     } else if (inputs.alternatives_ids.contains(id) || inputs.profiles_ids.contains(id)) {
                         negativeFlow.put(id, z);
                         iterator++;
+                    }
+                    else {
+                        errors.addError("You have alternative/profile in your flows that is not in your input file with alternatives/profiles. Check this out.");
                     }
                 }
             }
