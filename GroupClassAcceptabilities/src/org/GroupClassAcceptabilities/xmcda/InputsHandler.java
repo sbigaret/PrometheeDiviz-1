@@ -22,12 +22,6 @@ public class InputsHandler {
     }
 
 
-    /**
-     *
-     * @param xmcda
-     * @param xmcda_exec_results
-     * @return Inputs
-     */
     static public Inputs checkAndExtractInputs(XMCDA xmcda, ProgramExecutionResult xmcda_exec_results) throws ValueConverters.ConversionException {
         Inputs inputsDict = checkInputs(xmcda, xmcda_exec_results);
 
@@ -38,24 +32,17 @@ public class InputsHandler {
     }
 
 
-    /**
-     * Checks the inputs
-     *
-     * @param xmcda
-     * @param errors
-     * @return Inputs
-     */
     protected static Inputs checkInputs(XMCDA xmcda, ProgramExecutionResult errors)
     {
         Inputs inputs = new Inputs();
-        checkAlternatives(inputs, xmcda, errors);
-        checkCategories(inputs, xmcda, errors);
-        checkAlternativesAssignments(inputs, xmcda, errors);
+        checkAlternatives(xmcda, errors);
+        checkCategories(xmcda, errors);
+        checkAlternativesAssignments(xmcda, errors);
 
         return inputs;
     }
 
-    private static void checkAlternatives(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAlternatives(XMCDA xmcda, ProgramExecutionResult errors) {
         if (xmcda.alternatives.size() == 0) {
             errors.addError("No alternatives found");
             return;
@@ -66,14 +53,14 @@ public class InputsHandler {
         }
     }
 
-    private static void checkCategories(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkCategories(XMCDA xmcda, ProgramExecutionResult errors) {
         if(xmcda.categoriesValuesList.size() == 0) {
             errors.addError("No categories found");
             return;
         }
     }
 
-    private static void checkAlternativesAssignments(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAlternativesAssignments(XMCDA xmcda, ProgramExecutionResult errors) {
         if(xmcda.alternativesAssignmentsList.size() == 0) {
             errors.addError("No alternatives assignments found");
             return;
@@ -81,13 +68,6 @@ public class InputsHandler {
     }
 
 
-    /**
-     *
-     * @param inputs
-     * @param xmcda
-     * @param xmcda_execution_results
-     * @return
-     */
     protected static Inputs extractInputs(Inputs inputs, XMCDA xmcda, ProgramExecutionResult xmcda_execution_results) throws ValueConverters.ConversionException {
         extractAlternatives(inputs, xmcda, xmcda_execution_results);
         extractCategories(inputs, xmcda, xmcda_execution_results);
@@ -104,17 +84,18 @@ public class InputsHandler {
             }
         }
 
-        inputs.alternatives_ids = alternatives_ids;
         if (alternatives_ids.isEmpty()) {
             errors.addError("IDs are empty");
         }
+
+        inputs.alternatives_ids = alternatives_ids;
     }
 
     private static void extractCategories(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
         Map<String, Integer> categories_values = new HashMap<>();
         Set<String> categories = new HashSet<>();
 
-        int min = 100;
+        int min = Integer.MAX_VALUE;
         int max = -1;
 
         CategoriesValues<Integer> categoriesValues = xmcda.categoriesValuesList.get(0).convertTo(Integer.class);
@@ -129,6 +110,26 @@ public class InputsHandler {
             categories.add(category.getKey().id());
             categories_values.put(category.getKey().id(), category.getValue().get(0).getValue());
         }
+
+        if (min != 1) {
+            errors.addError("Minimal rank should be equal to 1.");
+            return;
+        }
+
+        if (max != categories_values.size()) {
+            errors.addError("Maximal rank should be equal to number of categories.");
+            return;
+        }
+
+        for (Map.Entry categoryA : categoriesValues.entrySet()) {
+            for (Map.Entry categoryB : categoriesValues.entrySet()) {
+                if (categoryA.getValue() == categoryB.getValue() && categoryA.getKey() != categoryB.getKey()) {
+                    errors.addError("There cannot be two categories with the same rank.");
+                    return;
+                }
+            }
+        }
+
         inputs.categories = categories;
         inputs.categoriesValues = categories_values;
 
@@ -146,6 +147,11 @@ public class InputsHandler {
                 int lower_bound_value = inputs.categoriesValues.get(lower_bound).intValue();
                 String upper_bound = ((AlternativeAssignment) single_assign).getCategoryInterval().getUpperBound().id();
                 int upper_bound_value = inputs.categoriesValues.get(upper_bound).intValue();
+
+                if(lower_bound_value > upper_bound_value) {
+                    errors.addError("Lower bound cannot be greater than upper bound class assignment.");
+                }
+
                 System.out.println("extract alt assign  " + alternative_id + " " +lower_bound_value + " " + upper_bound_value);
                 assignments.add(new Triple<String, Integer, Integer>(alternative_id, lower_bound_value, upper_bound_value));
             }
