@@ -8,17 +8,9 @@ import java.util.*;
 
 public class InputsHandler {
 
-    /**
-     * This class contains every element which are needed to compute the weighted sum.
-     * It is populated by {@link InputsHandler#checkAndExtractInputs(XMCDA, ProgramExecutionResult)}.
-     */
     public static class Inputs
     {
         public List<String> alternatives_ids;
-
-        public Map<String, Double> positiveFlow;
-
-        public Map<String, Double> negativeFlow;
 
         public ArrayList<Triple<String, String, Double>> preferenceTable;
 
@@ -28,12 +20,6 @@ public class InputsHandler {
     }
 
 
-    /**
-     *
-     * @param xmcda
-     * @param xmcda_exec_results
-     * @return
-     */
     static public Inputs checkAndExtractInputs(XMCDA xmcda, ProgramExecutionResult xmcda_exec_results) throws ValueConverters.ConversionException, ClassNotFoundException {
         Inputs inputsDict = checkInputs(xmcda, xmcda_exec_results);
 
@@ -44,24 +30,17 @@ public class InputsHandler {
     }
 
 
-    /**
-     * Checks the inputs
-     *
-     * @param xmcda
-     * @param errors
-     * @return Inputs
-     */
     protected static Inputs checkInputs(XMCDA xmcda, ProgramExecutionResult errors)
     {
         Inputs inputs = new Inputs();
-        checkAlternatives(inputs, xmcda, errors);
-        checkParameters(inputs, xmcda, errors);
-        checkPreferences(inputs, xmcda, errors);
+        checkAlternatives(xmcda, errors);
+        checkParameters(xmcda, errors);
+        checkPreferences(xmcda, errors);
 
         return inputs;
     }
 
-    private static void checkAlternatives(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAlternatives(XMCDA xmcda, ProgramExecutionResult errors) {
         if (xmcda.alternatives.size() == 0) {
             errors.addError("No alternatives found");
             return;
@@ -72,14 +51,14 @@ public class InputsHandler {
         }
     }
 
-    private static void checkParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkParameters(XMCDA xmcda, ProgramExecutionResult errors) {
         if (xmcda.programParametersList.size() == 0) {
             errors.addError("No parameters found");
             return;
         }
     }
 
-    private static void checkPreferences(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkPreferences(XMCDA xmcda, ProgramExecutionResult errors) {
         if (xmcda.alternativesMatricesList.size() == 0 || xmcda.alternativesMatricesList.get(0).size() == 0) {
             errors.addError("No preferences found");
             return;
@@ -87,13 +66,6 @@ public class InputsHandler {
     }
 
 
-    /**
-     *
-     * @param inputs
-     * @param xmcda
-     * @param xmcda_execution_results
-     * @return
-     */
     protected static Inputs extractInputs(Inputs inputs, XMCDA xmcda, ProgramExecutionResult xmcda_execution_results) throws ValueConverters.ConversionException, ClassNotFoundException {
         extractAlternatives(inputs, xmcda, xmcda_execution_results);
         extractParameters(inputs, xmcda, xmcda_execution_results);
@@ -109,10 +81,12 @@ public class InputsHandler {
                 alternatives_ids.add(alternative.id());
             }
         }
-        inputs.alternatives_ids = alternatives_ids;
+
         if (alternatives_ids.isEmpty()) {
             errors.addError("IDs are empty");
         }
+
+        inputs.alternatives_ids = alternatives_ids;
     }
 
     private static void extractParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException, ClassNotFoundException {
@@ -126,12 +100,20 @@ public class InputsHandler {
         String al = (String) alpha.get(0).getValue();
         String b = (String) beta.get(0).getValue();
 
-        inputs.function = al;
-        inputs.direction = b;
-
         if (al.isEmpty() || b.isEmpty()) {
             errors.addError("params are empty");
         }
+
+        if(!(al.equalsIgnoreCase("max") || al.equalsIgnoreCase("min")||al.equalsIgnoreCase("sum"))) {
+            errors.addError("There is wrong parameter for function.");
+        }
+
+        if(!(b.equalsIgnoreCase("in favor") || b.equalsIgnoreCase("against")||b.equalsIgnoreCase("difference"))) {
+            errors.addError("There is wrong parameter for direction.");
+        }
+
+        inputs.function = al;
+        inputs.direction = b;
     }
 
     private static void extractPreferences(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
@@ -148,10 +130,15 @@ public class InputsHandler {
             }
         }
 
-        inputs.preferenceTable = preferenceTable;
 
         if (preferenceTable.size() == 0) {
             errors.addError("preference table is empty");
         }
+
+        if(preferenceTable.size() != xmcda.alternatives.size() * xmcda.alternatives.size()) {
+            errors.addError("There is wrong number of values in preference table");
+        }
+
+        inputs.preferenceTable = preferenceTable;
     }
 }
