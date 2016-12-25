@@ -13,22 +13,10 @@ public class InputsHandler {
 
         public List<Map<String, Double>> flows;
 
-        //public Map<String, Double> negativeFlow;
-
         public List<Map<String, Double>> weights;
-
-        //public ArrayList<Triple<String, String, Double>> preferenceTable;
-
-        //public double alpha;
     }
 
 
-    /**
-     *
-     * @param xmcda
-     * @param xmcda_exec_results
-     * @return
-     */
     static public Inputs checkAndExtractInputs(XMCDA xmcda, ProgramExecutionResult xmcda_exec_results) throws ValueConverters.ConversionException {
         Inputs inputsDict = checkInputs(xmcda, xmcda_exec_results);
 
@@ -39,20 +27,11 @@ public class InputsHandler {
     }
 
 
-    /**
-     * Checks the inputs
-     *
-     * @param xmcda
-     * @param errors
-     * @return
-     */
     protected static Inputs checkInputs(XMCDA xmcda, ProgramExecutionResult errors)
     {
         Inputs inputs = new Inputs();
         checkAlternatives(inputs, xmcda, errors);
         checkAlternativesValues(inputs, xmcda, errors);
-        //checkParameters(inputs, xmcda, errors);
-        //checkPreferences(inputs, xmcda, errors);
 
         return inputs;
     }
@@ -77,36 +56,12 @@ public class InputsHandler {
         }
     }
 
-    private static void checkParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
-
-        if (xmcda.programParametersList.size() == 0) {
-            errors.addError("No parameters found");
-            return;
-        }
-    }
-
-    private static void checkPreferences(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
-
-        if (xmcda.alternativesMatricesList.size() == 0 || xmcda.alternativesMatricesList.get(0).size() == 0) {
-            errors.addError("No preferences found");
-            return;
-        }
-    }
 
 
-    /**
-     *
-     * @param inputs
-     * @param xmcda
-     * @param xmcda_execution_results
-     * @return
-     */
     protected static Inputs extractInputs(Inputs inputs, XMCDA xmcda, ProgramExecutionResult xmcda_execution_results) throws ValueConverters.ConversionException {
 
         extractAlternatives(inputs, xmcda, xmcda_execution_results);
         extractAlternativesValues(inputs, xmcda, xmcda_execution_results);
-        //extractParameters(inputs, xmcda, xmcda_execution_results);
-        //extractPreferences(inputs, xmcda, xmcda_execution_results);
 
         return inputs;
     }
@@ -119,10 +74,12 @@ public class InputsHandler {
                 alternatives_ids.add(alternative.id());
             }
         }
-        inputs.alternatives_ids = alternatives_ids;
+
         if (alternatives_ids.isEmpty()) {
             errors.addError("IDs are empty");
         }
+
+        inputs.alternatives_ids = alternatives_ids;
     }
 
     private static void extractAlternativesValues(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
@@ -135,7 +92,6 @@ public class InputsHandler {
         int iterator = 0;
         int decidentsIterator = 0;
         for(AlternativesValues flow : xmcda.alternativesValuesList) {
-            //Object id = flow.get(0);
             Set<Alternative> alt = flow.getAlternatives();
             for(Alternative al : alt) {
                 LabelledQValues x = (LabelledQValues) flow.get(al);
@@ -147,7 +103,6 @@ public class InputsHandler {
                 if(iterator < inputs.alternatives_ids.size() * xmcda.alternativesValuesList.size()/2) {
                     if (inputs.alternatives_ids.contains(id)) {
                         singleFlow.put(id, z);
-                        System.out.println("^^^^ " + singleFlow);
                         if(iterator % inputs.alternatives_ids.size() == (inputs.alternatives_ids.size()-1)) {
                             if(singleFlow.size() < inputs.alternatives_ids.size()) {
                                 errors.addError("There are too few weights");
@@ -160,10 +115,12 @@ public class InputsHandler {
                         }
                         iterator++;
                     }
+                    else {
+                        errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
+                    }
                 }
                 else if(inputs.alternatives_ids.contains(id)) {
                     singleWeights.put(id, z);
-                    System.out.println(singleWeights);
                     if(iterator % inputs.alternatives_ids.size() == (inputs.alternatives_ids.size()-1) && iterator > inputs.alternatives_ids.size()) {
                         if(singleWeights.size() < inputs.alternatives_ids.size()) {
                             errors.addError("There are too few weights");
@@ -176,54 +133,20 @@ public class InputsHandler {
                     }
                     iterator++;
                 }
+                else {
+                    errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
+                }
             }
         }
-        System.out.println("FLOWS " + flows);
-        System.out.println("WEIGHTS " + weights);
+
         if (decidentsIterator != 0) {
             errors.addError("There are to few values in flows or weights");
         }
         else {
-            //weights.add(singleWeights);
-            //flows.add(singleFlow);
 
             inputs.flows = flows;
             inputs.weights = weights;
         }
     }
-/*
-    private static void extractParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
-
-        ProgramParameters<?> params  = xmcda.programParametersList.get(0);
-        QualifiedValues<Double> alpha = params.get(0).getValues().convertToDouble();
-        double al = alpha.get(0).getValue();
-
-        inputs.alpha = al;
-
-        if (al == 0) {
-            errors.addError("params are empty");
-        }
-    }
-/*
-    private static void extractPreferences(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
-
-        ArrayList<Triple<String, String, Double>> preferenceTable = new ArrayList<>();
-
-        for(Alternative a : xmcda.alternatives) {
-            for(Alternative b: xmcda.alternatives) {
-                QualifiedValues<?> v = xmcda.alternativesMatricesList.get(0).get(a, b).convertToDouble();
-                double w = v.get(0).convertToDouble().getValue();
-
-                Triple<String, String, Double> tuple = new Triple<>(a.id(), b.id(), w);
-                preferenceTable.add(tuple);
-            }
-        }
-
-        inputs.preferenceTable = preferenceTable;
-
-        if (preferenceTable.size() == 0) {
-            errors.addError("preference table is empty");
-        }
-    } */
 }
 
