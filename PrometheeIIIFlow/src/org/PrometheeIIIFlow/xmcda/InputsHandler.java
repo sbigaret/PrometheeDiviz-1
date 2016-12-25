@@ -35,15 +35,15 @@ public class InputsHandler {
     protected static Inputs checkInputs(XMCDA xmcda, ProgramExecutionResult errors)
     {
         Inputs inputs = new Inputs();
-        checkAlternatives(inputs, xmcda, errors);
-        checkAlternativesValues(inputs, xmcda, errors);
-        checkParameters(inputs, xmcda, errors);
-        checkPreferences(inputs, xmcda, errors);
+        checkAlternatives(xmcda, errors);
+        checkAlternativesValues(xmcda, errors);
+        checkParameters(xmcda, errors);
+        checkPreferences(xmcda, errors);
 
         return inputs;
     }
 
-    private static void checkAlternatives(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAlternatives(XMCDA xmcda, ProgramExecutionResult errors) {
 
         if (xmcda.alternatives.size() == 0) {
             errors.addError("No alternatives found");
@@ -55,7 +55,7 @@ public class InputsHandler {
         }
     }
 
-    private static void checkAlternativesValues(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkAlternativesValues(XMCDA xmcda, ProgramExecutionResult errors) {
 
         if(xmcda.alternativesValuesList.size() == 0){
             errors.addError("No flows found");
@@ -63,7 +63,7 @@ public class InputsHandler {
         }
     }
 
-    private static void checkParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkParameters(XMCDA xmcda, ProgramExecutionResult errors) {
 
         if (xmcda.programParametersList.size() == 0) {
             errors.addError("No parameters found");
@@ -71,7 +71,7 @@ public class InputsHandler {
         }
     }
 
-    private static void checkPreferences(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+    private static void checkPreferences(XMCDA xmcda, ProgramExecutionResult errors) {
 
         if (xmcda.alternativesMatricesList.size() == 0 || xmcda.alternativesMatricesList.get(0).size() == 0) {
             errors.addError("No preferences found");
@@ -80,13 +80,6 @@ public class InputsHandler {
     }
 
 
-    /**
-     *
-     * @param inputs
-     * @param xmcda
-     * @param xmcda_execution_results
-     * @return
-     */
     protected static Inputs extractInputs(Inputs inputs, XMCDA xmcda, ProgramExecutionResult xmcda_execution_results) throws ValueConverters.ConversionException {
 
         extractAlternatives(inputs, xmcda, xmcda_execution_results);
