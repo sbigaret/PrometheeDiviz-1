@@ -22,10 +22,8 @@ public class OutputsHandler {
         {
             case "ranking":
                 return "alternativesMatrix";
-            case "aggregatedFlows":
+            case "aggregated_flows":
                 return "alternativesMatrix";
-            case "flows_2":
-                return "alternativesValues";
             case "messages":
                 return "programExecutionResult";
             default:
@@ -46,10 +44,8 @@ public class OutputsHandler {
         {
             case "ranking":
                 return "alternativesComparisons";
-            case "aggregatedFlows":
+            case "aggregated_flows":
                 return "alternativesComparisons";
-            case "flows_2":
-                return "alternativesValues";
             case "messages":
                 return "methodMessages";
             default:
@@ -66,30 +62,6 @@ public class OutputsHandler {
      */
     public static Map<String, XMCDA> convert(InputsHandler.Inputs inputs, List<Map<String, Double>> table_results, ProgramExecutionResult executionResult)
     {
-        /*final HashMap<String, XMCDA> x_results = new HashMap<>();
-
-        XMCDA xmcda = new XMCDA();
-        AlternativesValues<Double> x_alternatives_values = new AlternativesValues<Double>();
-
-        for(int i = 0; i < table_results.size(); i++) {
-            x_alternatives_values =  new AlternativesValues<Double>();
-            for (String alternative_id : table_results.get(i).keySet())
-                x_alternatives_values.put(new Alternative(alternative_id), table_results.get(i).get(alternative_id));
-
-            xmcda.alternativesValuesList.add(x_alternatives_values);
-
-            int iterator = i + 1;
-            String file = "flows_"+iterator;
-            x_results.put(file, xmcda);
-        }
-
-
-
-        return x_results; */
-
-
-        //Map<Pair<String, String>, String> alternativesComparison = (Map<Pair<String, String>, String>) table_results[0];
-        //Map<String, Pair<Double, Double>> intervals = (Map<String, Pair<Double, Double>>) table_results[1];
 
         final HashMap<String, XMCDA> x_results = new HashMap<>();
         XMCDA xmcda = new XMCDA();
@@ -129,30 +101,9 @@ public class OutputsHandler {
         }
 
         xmcda.alternativesMatricesList.add(aggregation);
-        x_results.put("aggregatedFlows", xmcda);
+        x_results.put("aggregated_flows", xmcda);
 
         return x_results;
 
-        /*final HashMap<String, XMCDA> x_intervals = new HashMap<>();
-        XMCDA xmcda2 = new XMCDA();
-        AlternativesValues<LabelledQValues<Double>> intervals_xmcda = new AlternativesValues<>();
-
-        for (String alternative_id : intervals.keySet()) {
-            LabelledQValues<Double> intervals_val = new LabelledQValues<>();
-            QualifiedValue<Double> x_int = new QualifiedValue<Double>(intervals.get(alternative_id).getKey());
-            x_int.setId("x_");
-            QualifiedValue<Double> y_int = new QualifiedValue<Double>(intervals.get(alternative_id).getValue());
-            y_int.setId("y_");
-            intervals_val.add(x_int);
-            intervals_val.add(y_int);
-            intervals_xmcda.put(new Alternative(alternative_id), intervals_val);
-        }
-
-        xmcda2.alternativesValuesList.add(intervals_xmcda);
-
-        x_results.put("intervals", xmcda2);
-
-        return x_results;
-        */
     }
 }
