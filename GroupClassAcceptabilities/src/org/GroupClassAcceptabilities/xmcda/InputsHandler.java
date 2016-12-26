@@ -140,7 +140,6 @@ public class InputsHandler {
         int dmsIterator = 1;
         for(AlternativesAssignments alt_assign: xmcda.alternativesAssignmentsList) {
             List<Triple<String, Integer, Integer>> assignments = new ArrayList<>();
-            System.out.println("Dms no " + dmsIterator);
             for(Object single_assign: alt_assign) {
                 String alternative_id = ((AlternativeAssignment) single_assign).getAlternative().id();
                 String lower_bound = ((AlternativeAssignment) single_assign).getCategoryInterval().getLowerBound().id();
@@ -152,14 +151,12 @@ public class InputsHandler {
                     errors.addError("Lower bound cannot be greater than upper bound class assignment.");
                 }
 
-                System.out.println("extract alt assign  " + alternative_id + " " +lower_bound_value + " " + upper_bound_value);
                 assignments.add(new Triple<String, Integer, Integer>(alternative_id, lower_bound_value, upper_bound_value));
             }
 
             alternatives_assignments.put(dmsIterator, assignments);
             dmsIterator++;
         }
-        System.out.println(alternatives_assignments);
 
         if(alternatives_assignments.size() == 0) {
             errors.addError("There are no assignments");
