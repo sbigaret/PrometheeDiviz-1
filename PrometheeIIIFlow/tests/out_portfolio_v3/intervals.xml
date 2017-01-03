@@ -1,0 +1,226 @@
+<?xml version="1.0" ?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2016/XMCDA-3.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.decision-deck.org/2016/XMCDA-3.0.2 http://www.decision-deck.org/xmcda/_downloads/XMCDA-3.0.2.xsd">
+
+<alternativesValues>
+		<alternativeValue>
+			<alternativeID>a11</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0011</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0507</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a10</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0385</real>
+				</value>
+				<value id="UpperFlow">
+					<real>-0.0024</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a13</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0353</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.035</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a12</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0403</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0176</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a15</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0329</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0241</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a14</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0394</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0217</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a17</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0346</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0329</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a16</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0428</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0249</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a19</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0185</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0444</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a18</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0364</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0314</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a1</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0398</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0244</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a2</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0333</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0177</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a3</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0198</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0467</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a4</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>0.0209</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0516</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a5</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0359</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0152</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a6</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0383</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.02</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a7</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0299</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0369</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a8</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0268</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0346</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a9</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0282</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.04</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>a20</alternativeID>
+			<values>
+				<value id="LowerFlow">
+					<real>-0.0349</real>
+				</value>
+				<value id="UpperFlow">
+					<real>0.0184</real>
+				</value>
+			</values>
+		</alternativeValue>
+	</alternativesValues>
+</xmcda:XMCDA>
