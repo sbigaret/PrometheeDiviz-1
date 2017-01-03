@@ -4,8 +4,8 @@ import javafx.util.Pair;
 import org.PrometheeIRanking.PrometheeIRanking;
 import org.xmcda.ProgramExecutionResult;
 import org.xmcda.XMCDA;
-import org.xmcda.converters.v2_2_1_v3_0.XMCDAConverter;
-import org.xmcda.parsers.xml.xmcda_2_2_1.XMCDAParser;
+import org.xmcda.converters.v2_v3.XMCDAConverter;
+import org.xmcda.parsers.xml.xmcda_v2.XMCDAParser;
 import org.xmcda.utils.ValueConverters;
 
 import java.io.File;
@@ -25,7 +25,7 @@ public class PrometheeIRankingCLI_XMCDAv2 {
 
         final XMCDA xmcda;
 
-        org.xmcda.v2_2_1.XMCDA xmcda_v2 = new org.xmcda.v2_2_1.XMCDA();
+        org.xmcda.v2.XMCDA xmcda_v2 = new org.xmcda.v2.XMCDA();
         Utils.loadXMCDAv2(xmcda_v2, new File(indir, "alternatives.xml"), false,
                 executionResult, "alternatives");
         Utils.loadXMCDAv2(xmcda_v2, new File(indir, "positive_flow.xml"), false,
@@ -71,7 +71,7 @@ public class PrometheeIRankingCLI_XMCDAv2 {
         final Map<String, XMCDA> x_results = OutputsHandler.convert(inputs.alternatives_ids, results, executionResult);
 
 
-        org.xmcda.v2_2_1.XMCDA results_v2;
+        org.xmcda.v2.XMCDA results_v2;
         for ( String outputName : x_results.keySet() )
         {
             File outputFile = new File(outdir, String.format("%s.xml", outputName));

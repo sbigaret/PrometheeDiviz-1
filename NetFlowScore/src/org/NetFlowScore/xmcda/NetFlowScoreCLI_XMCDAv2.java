@@ -3,8 +3,8 @@ package org.NetFlowScore.xmcda;
 import org.NetFlowScore.NetFlowScore;
 import org.xmcda.ProgramExecutionResult;
 import org.xmcda.XMCDA;
-import org.xmcda.converters.v2_2_1_v3_0.XMCDAConverter;
-import org.xmcda.parsers.xml.xmcda_2_2_1.XMCDAParser;
+import org.xmcda.converters.v2_v3.XMCDAConverter;
+import org.xmcda.parsers.xml.xmcda_v2.XMCDAParser;
 import org.xmcda.utils.ValueConverters;
 
 import java.io.File;
@@ -27,7 +27,7 @@ public class NetFlowScoreCLI_XMCDAv2 {
         final XMCDA xmcda;
 
         // Load XMCDA v2.2.1 inputs
-        org.xmcda.v2_2_1.XMCDA xmcda_v2 = new org.xmcda.v2_2_1.XMCDA();
+        org.xmcda.v2.XMCDA xmcda_v2 = new org.xmcda.v2.XMCDA();
         Utils.loadXMCDAv2(xmcda_v2, new File(indir, "alternatives.xml"), true,
                 executionResult, "alternatives");
         Utils.loadXMCDAv2(xmcda_v2, new File(indir, "preferences.xml"), true,
@@ -72,7 +72,7 @@ public class NetFlowScoreCLI_XMCDAv2 {
 
         final Map<String, XMCDA> x_results = OutputsHandler.convert(results, executionResult);
 
-        org.xmcda.v2_2_1.XMCDA results_v2;
+        org.xmcda.v2.XMCDA results_v2;
         for ( String outputName : x_results.keySet() )
         {
             File outputFile = new File(outdir, String.format("%s.xml", outputName));
