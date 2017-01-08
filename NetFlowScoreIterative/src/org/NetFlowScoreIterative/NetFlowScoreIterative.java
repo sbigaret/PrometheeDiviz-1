@@ -1,5 +1,6 @@
 package org.NetFlowScoreIterative;
 
+import org.NetFlowScoreIterative.structures.ListMapsComparer;
 import org.NetFlowScoreIterative.structures.Triple;
 import org.NetFlowScoreIterative.structures.TripleComparer;
 import org.NetFlowScoreIterative.xmcda.InputsHandler;
@@ -16,6 +17,75 @@ public class NetFlowScoreIterative {
 
         result = countResult(inputs.function, inputs.direction, inputs.alternatives_ids, inputs.preferenceTable, executionResult);
 
+        List<Map<String, Double>> sameValues = getSameValuesOnList(result);
+
+        ListMapsComparer listMapsComparer = new ListMapsComparer();
+        Collections.sort(sameValues, listMapsComparer);
+
+        Map<String, Integer> secondIteration = new LinkedHashMap<>();
+
+        int shift = 1;
+        for(Map<String, Double> sameValuesTuples : sameValues) {
+
+                Map<String, Integer> secondIterationPartial = countPartialResults(sameValuesTuples, inputs, executionResult, shift);
+
+                shift += sameValuesTuples.size();
+
+                secondIteration.putAll(secondIterationPartial);
+        }
+        /*
+        Map<String, Integer> fullResult = countFullResult(result, secondIteration, inputs.alternatives_ids); // ostateczny ranking z miejscami
+
+        return fullResult;
+        */
+
+        return secondIteration;
+    }
+
+    private static Map<String, Integer> countPartialResults(Map<String, Double> mapTuples, InputsHandler.Inputs inputs, ProgramExecutionResult executionResult, int shift) {
+        Map<String, Integer> results = new HashMap<>();
+
+        if(mapTuples.size() == 1) {
+            Map.Entry<String,Double> entry = mapTuples.entrySet().iterator().next();
+            String key= entry.getKey();
+            results.put(key, shift);
+            return results;
+        }
+
+        ArrayList<Triple<String, String, Double>> partialWeights = getPartialWeights(mapTuples, inputs.preferenceTable);
+        List<String> partialAlternatives = new ArrayList<>();
+
+        for(String key : mapTuples.keySet())  {
+            partialAlternatives.add(key);
+        }
+
+        Map<String, Double> iterationPartial = countResult(inputs.function, inputs.direction, partialAlternatives, partialWeights, executionResult);
+
+        List<Map<String, Double>> sameValues = getSameValuesOnList(iterationPartial);
+
+        ListMapsComparer listMapsComparer = new ListMapsComparer();
+        Collections.sort(sameValues, listMapsComparer);
+
+        int currentShift = shift;
+
+        if(sameValues.size() == 1) {
+            for(int i = 0; i < sameValues.get(0).size(); i++) {
+                Map.Entry<String,Double> entry = sameValues.get(0).entrySet().iterator().next();
+                String key= entry.getKey();
+                results.put(key, shift);
+            }
+        }
+
+        for(Map<String, Double> tuple: sameValues) {
+            Map<String, Integer> partial = countPartialResults(tuple, inputs, executionResult, currentShift);
+            currentShift += tuple.size();
+            results.putAll(partial);
+        }
+
+        return results;
+    }
+
+    private static List<Map<String, Double>> getSameValuesOnList(Map<String, Double> result) {
         boolean existsValue = false;
 
         List<Map<String, Double>> sameValues = new ArrayList<>();
@@ -35,26 +105,7 @@ public class NetFlowScoreIterative {
             }
         }
 
-        Map<String, Double> secondIteration = new LinkedHashMap<>();
-
-        for(Map<String, Double> sameValuesTuples : sameValues) {
-            if(sameValuesTuples.size() > 1) {
-                ArrayList<Triple<String, String, Double>> partialWeights = getPartialWeights(sameValuesTuples, inputs.preferenceTable);
-                List<String> partialAlternatives = new ArrayList<>();
-
-                for(String key : sameValuesTuples.keySet())  {
-                    partialAlternatives.add(key);
-                }
-
-                Map<String, Double> secondIterationPartial = countResult(inputs.function, inputs.direction, partialAlternatives, partialWeights, executionResult);
-
-                secondIteration.putAll(secondIterationPartial);
-            }
-        }
-
-        Map<String, Integer> fullResult = countFullResult(result, secondIteration, inputs.alternatives_ids); // ostateczny ranking z miejscami
-
-        return fullResult;
+        return sameValues;
     }
 
     private static Map<String, Double> countResult (String function, String direction, List<String> alternatives, ArrayList<Triple<String, String, Double>> weightsTable, ProgramExecutionResult executionResult) {
