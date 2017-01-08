@@ -41,11 +41,9 @@ public class PrometheeGroupRankingCLI_XMCDAv2 {
                     executionResult, "alternativesValues");
         }
 
-        for(int i = 1; i < 11; i++) {
-            String decidentWeights = "weights_" + i + ".xml";
+            String decidentWeights = "weights.xml";
             Utils.loadXMCDAv2(xmcda_v2, new File(indir, decidentWeights), false,
                     executionResult, "alternativesValues");
-        }
 
 
         // We have problems with the inputs, its time to stop
@@ -76,7 +74,7 @@ public class PrometheeGroupRankingCLI_XMCDAv2 {
         // Here we know that everything was loaded as expected
 
         // Now let's call the calculation method
-        final List<Map<String, Double>> results;
+        final Map<String, Double> results;
         try {
             results = PrometheeGroupRanking.calculatePrometheeGroupRanking(inputs);
         } catch (Throwable t) {

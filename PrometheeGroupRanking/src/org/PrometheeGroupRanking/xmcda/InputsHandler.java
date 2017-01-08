@@ -13,7 +13,7 @@ public class InputsHandler {
 
         public List<Map<String, Double>> flows;
 
-        public List<Map<String, Double>> weights;
+        public Map<String, Double> weights;
     }
 
 
@@ -85,12 +85,12 @@ public class InputsHandler {
     private static void extractAlternativesValues(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
 
         Map<String, Double> singleFlow = new HashMap<>();
-        Map<String, Double> singleWeights = new HashMap<>();
-        List<Map<String, Double>> weights = new ArrayList<>();
+        Map<String, Double> weights = new TreeMap<>();
         List<Map<String, Double>> flows = new ArrayList<>();
 
         int iterator = 0;
         int decidentsIterator = 0;
+        Set<Alternative> realAlternatives = xmcda.alternativesValuesList.get(0).getAlternatives();
         for(AlternativesValues flow : xmcda.alternativesValuesList) {
             Set<Alternative> alt = flow.getAlternatives();
             for(Alternative al : alt) {
@@ -100,12 +100,12 @@ public class InputsHandler {
 
                 String id = al.id();
 
-                if(iterator < inputs.alternatives_ids.size() * xmcda.alternativesValuesList.size()/2) {
+                if(iterator < realAlternatives.size() * (xmcda.alternativesValuesList.size() -1)) {
                     if (inputs.alternatives_ids.contains(id)) {
                         singleFlow.put(id, z);
-                        if(iterator % inputs.alternatives_ids.size() == (inputs.alternatives_ids.size()-1)) {
-                            if(singleFlow.size() < inputs.alternatives_ids.size()) {
-                                errors.addError("There are too few weights");
+                        if(iterator % inputs.alternatives_ids.size() == (realAlternatives.size()-1)) {
+                            if(singleFlow.size() < realAlternatives.size()) {
+                                errors.addError("There are too few flows values");
                             }
                             else {
                                 flows.add(singleFlow);
@@ -120,17 +120,12 @@ public class InputsHandler {
                     }
                 }
                 else if(inputs.alternatives_ids.contains(id)) {
-                    singleWeights.put(id, z);
-                    if(iterator % inputs.alternatives_ids.size() == (inputs.alternatives_ids.size()-1) && iterator > inputs.alternatives_ids.size()) {
-                        if(singleWeights.size() < inputs.alternatives_ids.size()) {
-                            errors.addError("There are too few weights");
-                        }
-                        else {
-                            weights.add(singleWeights);
-                            singleWeights = new HashMap<>();
-                            decidentsIterator--;
-                        }
-                    }
+                    weights.put(id, z);
+                    //if(iterator % inputs.alternatives_ids.size() == (inputs.alternatives_ids.size()-1) && iterator > inputs.alternatives_ids.size()) {
+                       // if(weights.size() < inputs.alternatives_ids.size()) {
+                           // errors.addError("There are too few weights");
+                        //}
+                   // }
                     iterator++;
                 }
                 else {
@@ -139,14 +134,10 @@ public class InputsHandler {
             }
         }
 
-        if (decidentsIterator != 0) {
-            errors.addError("There are to few values in flows or weights");
-        }
-        else {
+        flows.add(singleFlow);
+        inputs.flows = flows;
+        inputs.weights = weights;
 
-            inputs.flows = flows;
-            inputs.weights = weights;
-        }
     }
 }
 

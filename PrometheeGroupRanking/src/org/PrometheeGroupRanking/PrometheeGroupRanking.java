@@ -1,33 +1,32 @@
 package org.PrometheeGroupRanking;
 
 import org.PrometheeGroupRanking.xmcda.InputsHandler;
+import org.xmcda.Alternative;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class PrometheeGroupRanking {
-    public static List<Map<String, Double>> calculatePrometheeGroupRanking(InputsHandler.Inputs inputs) {
+    public static Map<String, Double> calculatePrometheeGroupRanking(InputsHandler.Inputs inputs) {
         List<Map<String, Double>> flows = inputs.flows;
-        List<Map<String, Double>> weights = inputs.weights;
+        Map<String, Double> weights = inputs.weights;
         List<Map<String, Double>> ranking = new ArrayList<>();
 
-        for(Map<String, Double> singleWeight : weights) {
-
-            if(singleWeight.size() != 0) {
-                Map<String, Double> singleFlow = flows.get(weights.indexOf(singleWeight));
-                Map<String, Double> weightedFlows = new HashMap<>();
-                for (String alternative : inputs.alternatives_ids) {
-                    double value = Format(singleFlow.get(alternative) * singleWeight.get(alternative));
-                    weightedFlows.put(alternative, value);
-                }
-                ranking.add(weightedFlows);
+        Map<String, Double> singleFlow = new HashMap<>();
+        Map<String, Double> weightedFlows = new HashMap<>();
+        Set<String> realAlternatives = flows.get(0).keySet();
+        for (String alternative : realAlternatives) {
+            double value = 0;
+            for(int i = 1; i < flows.size() + 1; i++) {
+                singleFlow = flows.get(i-1);
+                String dm = String.valueOf(i);
+                value += singleFlow.get(alternative) * weights.get(dm);
             }
+            weightedFlows.put(alternative, Format(value));
         }
-        return ranking;
+
+        return weightedFlows;
     }
 
     private static double Format(double number) {

@@ -3,26 +3,18 @@
 
 <alternativesValues>
 		<alternativeValue>
-			<alternativeID>A</alternativeID>
-			<values>
-				<value>
-					<real>0.3</real>
-				</value>
-			</values>
-		</alternativeValue>
-		<alternativeValue>
-			<alternativeID>B</alternativeID>
-			<values>
-				<value>
-					<real>0.2</real>
-				</value>
-			</values>
-		</alternativeValue>
-		<alternativeValue>
-			<alternativeID>C</alternativeID>
+			<alternativeID>1</alternativeID>
 			<values>
 				<value>
 					<real>0.1</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
+			<alternativeID>2</alternativeID>
+			<values>
+				<value>
+					<real>0.2</real>
 				</value>
 			</values>
 		</alternativeValue>

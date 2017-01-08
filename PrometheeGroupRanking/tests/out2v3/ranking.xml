@@ -1,63 +1,30 @@
 <?xml version="1.0" ?>
 <xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2016/XMCDA-3.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.decision-deck.org/2016/XMCDA-3.0.2 http://www.decision-deck.org/xmcda/_downloads/XMCDA-3.0.2.xsd">
 
-<alternativesMatrix>
-		<row>
+<alternativesValues>
+		<alternativeValue>
 			<alternativeID>A</alternativeID>
-			<column>
-				<alternativeID>DM1</alternativeID>
-				<values>
-					<value>
-						<real>0.045</real>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>DM2</alternativeID>
-				<values>
-					<value>
-						<real>0.183</real>
-					</value>
-				</values>
-			</column>
-		</row>
-		<row>
+			<values>
+				<value>
+					<real>0.167</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
 			<alternativeID>B</alternativeID>
-			<column>
-				<alternativeID>DM1</alternativeID>
-				<values>
-					<value>
-						<real>0.144</real>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>DM2</alternativeID>
-				<values>
-					<value>
-						<real>0.11</real>
-					</value>
-				</values>
-			</column>
-		</row>
-		<row>
+			<values>
+				<value>
+					<real>0.182</real>
+				</value>
+			</values>
+		</alternativeValue>
+		<alternativeValue>
 			<alternativeID>C</alternativeID>
-			<column>
-				<alternativeID>DM1</alternativeID>
-				<values>
-					<value>
-						<real>0.243</real>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>DM2</alternativeID>
-				<values>
-					<value>
-						<real>0.027</real>
-					</value>
-				</values>
-			</column>
-		</row>
-	</alternativesMatrix>
+			<values>
+				<value>
+					<real>0.135</real>
+				</value>
+			</values>
+		</alternativeValue>
+	</alternativesValues>
 </xmcda:XMCDA>

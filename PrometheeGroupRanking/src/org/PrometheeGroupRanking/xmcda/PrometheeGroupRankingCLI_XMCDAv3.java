@@ -29,11 +29,9 @@ public class PrometheeGroupRankingCLI_XMCDAv3 {
                     executionResult, "alternativesValues");
         }
 
-        for(int i = 1; i < 11; i++) {
-            String decidentWeights = "weights_" + i + ".xml";
+            String decidentWeights = "weights.xml";
             Utils.loadXMCDAv3(xmcda, new File(indir, decidentWeights), false,
                     executionResult, "alternativesValues");
-        }
 
 
         if ( ! (executionResult.isOk() || executionResult.isWarning() ) )
@@ -48,7 +46,7 @@ public class PrometheeGroupRankingCLI_XMCDAv3 {
             Utils.writeProgramExecutionResultsAndExit(prgExecResults, executionResult, Utils.XMCDA_VERSION.v3);
         }
 
-        final List<Map<String, Double>> results;
+        final Map<String, Double> results;
         try
         {
             results = PrometheeGroupRanking.calculatePrometheeGroupRanking(inputs);

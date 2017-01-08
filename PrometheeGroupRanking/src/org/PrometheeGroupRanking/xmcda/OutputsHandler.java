@@ -21,7 +21,7 @@ public class OutputsHandler {
         switch(outputName)
         {
             case "ranking":
-                return "alternativesMatrix";
+                return "alternativesValues";
             case "aggregated_flows":
                 return "alternativesMatrix";
             case "messages":
@@ -43,7 +43,7 @@ public class OutputsHandler {
         switch(outputName)
         {
             case "ranking":
-                return "alternativesComparisons";
+                return "alternativesValues";
             case "aggregated_flows":
                 return "alternativesComparisons";
             case "messages":
@@ -60,28 +60,26 @@ public class OutputsHandler {
      * @param executionResult
      * @return a map with keys being xmcda objects' names and values their corresponding XMCDA object
      */
-    public static Map<String, XMCDA> convert(InputsHandler.Inputs inputs, List<Map<String, Double>> table_results, ProgramExecutionResult executionResult)
+    public static Map<String, XMCDA> convert(InputsHandler.Inputs inputs, Map<String, Double> table_results, ProgramExecutionResult executionResult)
     {
 
         final HashMap<String, XMCDA> x_results = new HashMap<>();
         XMCDA xmcda = new XMCDA();
-        AlternativesMatrix<Double> result = new AlternativesMatrix<Double>();
+        AlternativesValues<Double> result = new AlternativesValues<Double>();
 
         for (int i = 0; i < table_results.size(); i++) {
             for(String alternative1: inputs.alternatives_ids) {
-                if (table_results.get(i).keySet().contains(alternative1)) {
+                if (table_results.keySet().contains(alternative1)) {
                     int noDm = i + 1;
-                    Double value = table_results.get(i).get(alternative1);
                     Alternative alt1 = new Alternative(alternative1);
-                    Alternative alt2 = new Alternative("DM"+noDm);
-                    Coord<Alternative, Alternative> coord = new Coord<Alternative, Alternative>(alt1, alt2);
-                    QualifiedValues<Double> values = new QualifiedValues<Double>(new QualifiedValue<Double>(value));
-                    result.put(coord, values);
+                    Double value = table_results.get(alternative1);
+                    LabelledQValues<Double> values = new LabelledQValues<>(new QualifiedValue<Double>(value));
+                    result.put(alt1, values);
                 }
             }
         }
 
-        xmcda.alternativesMatricesList.add(result);
+        xmcda.alternativesValuesList.add(result);
         x_results.put("ranking", xmcda);
 
         AlternativesMatrix<Double> aggregation = new AlternativesMatrix<Double>();

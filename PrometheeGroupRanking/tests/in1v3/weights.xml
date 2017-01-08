@@ -3,7 +3,7 @@
 
 <alternativesValues>
 		<alternativeValue>
-			<alternativeID>A</alternativeID>
+			<alternativeID>1</alternativeID>
 			<values>
 				<value>
 					<real>0.21</real>
@@ -11,18 +11,10 @@
 			</values>
 		</alternativeValue>
 		<alternativeValue>
-			<alternativeID>B</alternativeID>
+			<alternativeID>2</alternativeID>
 			<values>
 				<value>
 					<real>0.22</real>
-				</value>
-			</values>
-		</alternativeValue>
-		<alternativeValue>
-			<alternativeID>C</alternativeID>
-			<values>
-				<value>
-					<real>0.23</real>
 				</value>
 			</values>
 		</alternativeValue>

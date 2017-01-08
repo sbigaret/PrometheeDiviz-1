@@ -4,21 +4,15 @@
         xsi:schemaLocation='http://www.decision-deck.org/2012/XMCDA-2.2.1 http://www.decision-deck.org/xmcda/_downloads/XMCDA-2.2.1.xsd'>
 <alternativesValues>
   <alternativeValue>
-    <alternativeID>A</alternativeID>
+    <alternativeID>1</alternativeID>
     <value>
-      <real>0.17</real>
+      <real>0.7</real>
     </value>
   </alternativeValue>
   <alternativeValue>
-    <alternativeID>B</alternativeID>
+    <alternativeID>2</alternativeID>
     <value>
-      <real>0.19</real>
-    </value>
-  </alternativeValue>
-  <alternativeValue>
-    <alternativeID>C</alternativeID>
-    <value>
-      <real>0.21</real>
+      <real>0.9</real>
     </value>
   </alternativeValue>
 </alternativesValues>
