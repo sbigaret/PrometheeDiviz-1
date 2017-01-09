@@ -15,149 +15,149 @@
       <xmcda tag="alternatives"/>
     </input>
 
-    <input id="input2" name="flows_1" displayName="flows_1" isoptional="0">
+    <input id="flows_1" name="flows_1" displayName="flows_1" isoptional="0">
       <documentation>
         <description>Flows for decision maker 1.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_2" displayName="flows_2" isoptional="0">
+    <input id="flows_2" name="flows_2" displayName="flows_2" isoptional="0">
       <documentation>
         <description>Flows for decision maker 2.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_3" displayName="flows_3" isoptional="1">
+    <input id="flows_3" name="flows_3" displayName="flows_3" isoptional="1">
       <documentation>
         <description>Flows for decision maker 3.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_4" displayName="flows_4" isoptional="1">
+    <input id="flows_4" name="flows_4" displayName="flows_4" isoptional="1">
       <documentation>
         <description>Flows for decision maker 4.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_5" displayName="flows_5" isoptional="1">
+    <input id="flows_5" name="flows_5" displayName="flows_5" isoptional="1">
       <documentation>
         <description>Flows for decision maker 5.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_6" displayName="flows_6" isoptional="1">
+    <input id="flows_6" name="flows_6" displayName="flows_6" isoptional="1">
       <documentation>
         <description>Flows for decision maker 6.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_7" displayName="flows_7" isoptional="1">
+    <input id="flows_7" name="flows_7" displayName="flows_7" isoptional="1">
       <documentation>
         <description>Flows for decision maker 7.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_8" displayName="flows_8" isoptional="1">
+    <input id="flows_8" name="flows_8" displayName="flows_8" isoptional="1">
       <documentation>
         <description>Flows for decision maker 8.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_9" displayName="flows_9" isoptional="1">
+    <input id="flows_9" name="flows_9" displayName="flows_9" isoptional="1">
       <documentation>
         <description>Flows for decision maker 9.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="flows_10" displayName="flows_10" isoptional="1">
+    <input id="flows_10" name="flows_10" displayName="flows_10" isoptional="1">
       <documentation>
         <description>Flows for decision maker 10.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_1" displayName="weights_1" isoptional="0">
+    <input id="weights_1" name="weights_1" displayName="weights_1" isoptional="0">
       <documentation>
         <description>Weights for decision maker 1.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_2" displayName="weights_2" isoptional="0">
+    <input id="weights_2" name="weights_2" displayName="weights_2" isoptional="0">
       <documentation>
         <description>Weights for decision maker 2.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_3" displayName="weights_3" isoptional="1">
+    <input id="weights_3" name="weights_3" displayName="weights_3" isoptional="1">
       <documentation>
         <description>Weights for decision maker 3.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_4" displayName="weights_4" isoptional="1">
+    <input id="weights_4" name="weights_4" displayName="weights_4" isoptional="1">
       <documentation>
         <description>Weights for decision maker 4.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_5" displayName="weights_5" isoptional="1">
+    <input id="weights_5" name="weights_5" displayName="weights_5" isoptional="1">
       <documentation>
         <description>Weights for decision maker 5.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_6" displayName="weights_6" isoptional="1">
+    <input id="weights_6" name="weights_6" displayName="weights_6" isoptional="1">
       <documentation>
         <description>Weights for decision maker 6.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_7" displayName="weights_7" isoptional="1">
+    <input id="weights_7" name="weights_7" displayName="weights_7" isoptional="1">
       <documentation>
         <description>Weights for decision maker 7.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_8" displayName="weights_8" isoptional="1">
+    <input id="weights_8" name="weights_8" displayName="weights_8" isoptional="1">
       <documentation>
         <description>Weights for decision maker 8.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_9" displayName="weights_9" isoptional="1">
+    <input id="weights_9" name="weights_9" displayName="weights_9" isoptional="1">
       <documentation>
         <description>Weights for decision maker 9.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input2" name="weights_10" displayName="weights_10" isoptional="1">
+    <input id="weights_10" name="weights_10" displayName="weights_10" isoptional="1">
       <documentation>
         <description>Weights for decision maker 10.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
-    <output id="output1" name="aggragatedFlows" displayName="aggragatedFlows">
+    <output id="output1" name="aggregated_flows" displayName="aggregatedFlows">
       <documentation>
-        <description>Aggragated flows and weights for decision makers.</description>
+        <description>Aggregated flows and weights for decision makers.</description>
       </documentation>
       <xmcda tag="alternativesComparisons" />
     </output>
