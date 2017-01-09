@@ -43,32 +43,6 @@
             </pair>
             <pair>
                 <initial>
-                    <alternativeID>pMG</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>DM1</alternativeID>
-                </terminal>
-                <values>
-                    <value>
-                        <real>0.3</real>
-                    </value>
-                </values>
-            </pair>
-            <pair>
-                <initial>
-                    <alternativeID>pBM</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>DM1</alternativeID>
-                </terminal>
-                <values>
-                    <value>
-                        <real>0.1</real>
-                    </value>
-                </values>
-            </pair>
-            <pair>
-                <initial>
                     <alternativeID>A</alternativeID>
                 </initial>
                 <terminal>
@@ -103,32 +77,6 @@
                 <values>
                     <value>
                         <real>0.3</real>
-                    </value>
-                </values>
-            </pair>
-            <pair>
-                <initial>
-                    <alternativeID>pMG</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>DM2</alternativeID>
-                </terminal>
-                <values>
-                    <value>
-                        <real>0.8</real>
-                    </value>
-                </values>
-            </pair>
-            <pair>
-                <initial>
-                    <alternativeID>pBM</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>DM2</alternativeID>
-                </terminal>
-                <values>
-                    <value>
-                        <real>0.1</real>
                     </value>
                 </values>
             </pair>

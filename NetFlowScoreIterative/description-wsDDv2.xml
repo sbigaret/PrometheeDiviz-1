@@ -84,9 +84,9 @@
       </gui>
     </input>
 
-    <output id="output1" name="ranking" displayName="flows">
+    <output id="output1" name="ranking" displayName="ranking">
       <documentation>
-        <description>Final flows computed from the given data.</description>
+        <description>Final ranking computed from the given data.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </output>

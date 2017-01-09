@@ -41,7 +41,7 @@ public class PrometheeGroupRankingCLI_XMCDAv2 {
                     executionResult, "alternativesValues");
         }
 
-            String decidentWeights = "weights.xml";
+            String decidentWeights = "weightsDMs.xml";
             Utils.loadXMCDAv2(xmcda_v2, new File(indir, decidentWeights), false,
                     executionResult, "alternativesValues");
 

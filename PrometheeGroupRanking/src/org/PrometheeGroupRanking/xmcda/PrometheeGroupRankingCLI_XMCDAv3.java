@@ -29,7 +29,7 @@ public class PrometheeGroupRankingCLI_XMCDAv3 {
                     executionResult, "alternativesValues");
         }
 
-            String decidentWeights = "weights.xml";
+            String decidentWeights = "weightsDMs.xml";
             Utils.loadXMCDAv3(xmcda, new File(indir, decidentWeights), false,
                     executionResult, "alternativesValues");
 
