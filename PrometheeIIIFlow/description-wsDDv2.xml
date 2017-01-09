@@ -54,7 +54,7 @@
 			]]>
       </xmcda>
       <gui status="preferGUI">
-        <entry id="%1" type="real" displayName="alpha">
+        <entry id="%1" type="float" displayName="alpha">
           <documentation>
             <description>An alpha parameter.</description>
           </documentation>
