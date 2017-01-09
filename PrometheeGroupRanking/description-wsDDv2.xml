@@ -155,9 +155,9 @@
       <xmcda tag="alternativesValues" />
     </input>
 
-    <output id="output1" name="aggragatedFlows" displayName="aggragatedFlows">
+    <output id="output1" name="aggregated_flows" displayName="aggregatedFlows">
       <documentation>
-        <description>Aggragated flows and weights for decision makers.</description>
+        <description>Aggregated flows and weights for decision makers.</description>
       </documentation>
       <xmcda tag="alternativesComparisons" />
     </output>
