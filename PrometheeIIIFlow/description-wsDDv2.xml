@@ -58,10 +58,6 @@
           <documentation>
             <description>An alpha parameter.</description>
           </documentation>
-          <constraint>
-            <description>This identifier cannot be empty</description>
-            <code>! %1.isEmpty()</code>
-          </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
       </gui>
