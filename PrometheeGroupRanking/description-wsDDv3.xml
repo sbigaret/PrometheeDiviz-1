@@ -16,70 +16,70 @@
       <xmcda tag="alternatives" />
     </input>
 
-	  <input id="flows_1" name="flows_1" displayName="flows_1" isoptional="0">
+	  <input id="flows_1" name="flows_1" displayName="flows1" isoptional="0">
 		  <documentation>
 			  <description>Flows for decision maker 1.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_2" name="flows_2" displayName="flows_2" isoptional="0">
+	  <input id="flows_2" name="flows_2" displayName="flows2" isoptional="0">
 		  <documentation>
 			  <description>Flows for decision maker 2.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_3" name="flows_3" displayName="flows_3" isoptional="1">
+	  <input id="flows_3" name="flows_3" displayName="flows3" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 3.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_4" name="flows_4" displayName="flows_4" isoptional="1">
+	  <input id="flows_4" name="flows_4" displayName="flows4" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 4.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_5" name="flows_5" displayName="flows_5" isoptional="1">
+	  <input id="flows_5" name="flows_5" displayName="flows5" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 5.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_6" name="flows_6" displayName="flows_6" isoptional="1">
+	  <input id="flows_6" name="flows_6" displayName="flows6" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 6.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_7" name="flows_7" displayName="flows_7" isoptional="1">
+	  <input id="flows_7" name="flows_7" displayName="flows7" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 7.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_8" name="flows_8" displayName="flows_8" isoptional="1">
+	  <input id="flows_8" name="flows_8" displayName="flows8" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 8.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_9" name="flows_9" displayName="flows_9" isoptional="1">
+	  <input id="flows_9" name="flows_9" displayName="flows9" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 9.</description>
 		  </documentation>
 		  <xmcda tag="alternativesValues" />
 	  </input>
 
-	  <input id="flows_10" name="flows_10" displayName="flows_10" isoptional="1">
+	  <input id="flows_10" name="flows_10" displayName="flows10" isoptional="1">
 		  <documentation>
 			  <description>Flows for decision maker 10.</description>
 		  </documentation>

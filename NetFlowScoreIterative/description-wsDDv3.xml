@@ -25,7 +25,7 @@
       <xmcda tag="alternativesMatrix" />
     </input>
 
-	<input id="input3" name="parameters" displayName="method_parameters" isoptional="0">
+	<input id="input3" name="parameters" displayName="methodParameters" isoptional="0">
 		<documentation>
 			<description>First parameter specifies the current function from {max, min, sum}. Second parameter specifies direction of the calculation from {in favor, against, difference}.</description>
 		</documentation>
