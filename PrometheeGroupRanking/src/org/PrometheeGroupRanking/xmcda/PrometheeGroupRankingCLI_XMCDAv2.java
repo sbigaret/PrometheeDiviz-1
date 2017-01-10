@@ -111,6 +111,10 @@ public class PrometheeGroupRankingCLI_XMCDAv2 {
             }
         }
 
+        if (!executionResult.isError()) {
+            executionResult.addDebug("Success");
+        }
+
         Utils.writeProgramExecutionResultsAndExit(prgExecResultsFile, executionResult, Utils.XMCDA_VERSION.v2);
         // previous statement terminates the execution
     }

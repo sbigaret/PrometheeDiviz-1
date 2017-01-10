@@ -99,6 +99,11 @@ public class NetFlowScoreCLI_XMCDAv2 {
                 outputFile.delete();
             }
         }
+
+        if (!executionResult.isError()) {
+            executionResult.addDebug("Success");
+        }
+
         Utils.writeProgramExecutionResultsAndExit(prgExecResultsFile, executionResult, Utils.XMCDA_VERSION.v2);
     }
 }

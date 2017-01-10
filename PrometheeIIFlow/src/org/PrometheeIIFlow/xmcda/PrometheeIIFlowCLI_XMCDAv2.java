@@ -62,7 +62,6 @@ public class PrometheeIIFlowCLI_XMCDAv2 {
             return; // just to make the compiler happy about xmcda being final and potentially not initialized below
         }
 
-		/* TODO à partir de là on est un moment en copy/paste de la version v3 */
         // Let's check the inputs and convert them into our own structures
         final InputsHandler.Inputs inputs = InputsHandler.checkAndExtractInputs(xmcda, executionResult);
 
@@ -87,7 +86,6 @@ public class PrometheeIIFlowCLI_XMCDAv2 {
         // Fine, now let's put the results into XMCDA structures
         final Map<String, XMCDA> x_results = OutputsHandler.convert(results, executionResult);
 
-		/* TODO À partir de là on retourne sur du spécifique */
         // and finally, write them onto the appropriate files
         org.xmcda.v2.XMCDA results_v2;
         for (String outputName : x_results.keySet()) {
@@ -109,6 +107,10 @@ public class PrometheeIIFlowCLI_XMCDAv2 {
                 // Whatever the error is, clean up the file: we do not want to leave an empty or partially-written file
                 outputFile.delete();
             }
+        }
+
+        if (!executionResult.isError()) {
+            executionResult.addDebug("Success");
         }
 
         Utils.writeProgramExecutionResultsAndExit(prgExecResultsFile, executionResult, Utils.XMCDA_VERSION.v2);

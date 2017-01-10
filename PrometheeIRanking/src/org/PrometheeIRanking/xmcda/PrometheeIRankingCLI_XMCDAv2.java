@@ -99,6 +99,10 @@ public class PrometheeIRankingCLI_XMCDAv2 {
             }
         }
 
+        if (!executionResult.isError()) {
+            executionResult.addDebug("Success");
+        }
+
         Utils.writeProgramExecutionResultsAndExit(prgExecResultsFile, executionResult, Utils.XMCDA_VERSION.v2);
     }
 
