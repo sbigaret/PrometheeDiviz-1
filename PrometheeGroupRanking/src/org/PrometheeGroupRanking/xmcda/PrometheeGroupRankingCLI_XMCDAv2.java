@@ -41,9 +41,9 @@ public class PrometheeGroupRankingCLI_XMCDAv2 {
                     executionResult, "alternativesValues");
         }
 
-            String decidentWeights = "weightsDMs.xml";
-            Utils.loadXMCDAv2(xmcda_v2, new File(indir, decidentWeights), false,
-                    executionResult, "alternativesValues");
+            String decidentWeights = "method_parameters.xml";
+            Utils.loadXMCDAv2(xmcda_v2, new File(indir, decidentWeights), true,
+                    executionResult, "methodParameters");
 
 
         // We have problems with the inputs, its time to stop

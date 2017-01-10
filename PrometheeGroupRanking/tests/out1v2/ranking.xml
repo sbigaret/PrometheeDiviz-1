@@ -4,19 +4,19 @@
         <alternativeValue>
             <alternativeID>A</alternativeID>
             <value>
-                <real>0.52</real>
+                <real>0.19</real>
             </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>B</alternativeID>
             <value>
-                <real>0.7</real>
+                <real>0.25</real>
             </value>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>C</alternativeID>
             <value>
-                <real>0.41</real>
+                <real>0.17</real>
             </value>
         </alternativeValue>
     </alternativesValues>

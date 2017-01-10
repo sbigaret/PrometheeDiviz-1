@@ -10,7 +10,7 @@ import java.util.*;
 public class PrometheeGroupRanking {
     public static Map<String, Double> calculatePrometheeGroupRanking(InputsHandler.Inputs inputs) {
         List<Map<String, Double>> flows = inputs.flows;
-        Map<String, Double> weights = inputs.weights;
+        ArrayList<Double> weights = inputs.weights;
         List<Map<String, Double>> ranking = new ArrayList<>();
 
         Map<String, Double> singleFlow = new HashMap<>();
@@ -21,7 +21,7 @@ public class PrometheeGroupRanking {
             for(int i = 1; i < flows.size() + 1; i++) {
                 singleFlow = flows.get(i-1);
                 String dm = String.valueOf(i);
-                value += singleFlow.get(alternative) * weights.get(dm);
+                value += singleFlow.get(alternative) * weights.get(i-1);
             }
             weightedFlows.put(alternative, Format(value));
         }

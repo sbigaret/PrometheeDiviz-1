@@ -13,7 +13,7 @@ public class InputsHandler {
 
         public List<Map<String, Double>> flows;
 
-        public Map<String, Double> weights;
+        public ArrayList<Double> weights;
     }
 
 
@@ -32,8 +32,17 @@ public class InputsHandler {
         Inputs inputs = new Inputs();
         checkAlternatives(inputs, xmcda, errors);
         checkAlternativesValues(inputs, xmcda, errors);
+        checkParameters(xmcda, errors);
 
         return inputs;
+    }
+
+    private static void checkParameters(XMCDA xmcda, ProgramExecutionResult errors) {
+
+        if (xmcda.programParametersList.size() == 0) {
+            errors.addError("No parameters found");
+            return;
+        }
     }
 
     private static void checkAlternatives(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
@@ -61,6 +70,7 @@ public class InputsHandler {
     protected static Inputs extractInputs(Inputs inputs, XMCDA xmcda, ProgramExecutionResult xmcda_execution_results) throws ValueConverters.ConversionException {
 
         extractAlternatives(inputs, xmcda, xmcda_execution_results);
+        extractParameters(inputs, xmcda, xmcda_execution_results);
         extractAlternativesValues(inputs, xmcda, xmcda_execution_results);
 
         return inputs;
@@ -82,10 +92,36 @@ public class InputsHandler {
         inputs.alternatives_ids = alternatives_ids;
     }
 
+    private static void extractParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
+
+        ArrayList<Double> weights = new ArrayList<>();
+        ProgramParameters<?> params  = xmcda.programParametersList.get(0);
+        for(int i = 1; i <= params.size(); i++) {
+            String id = params.get(i - 1).id();
+            if (!("decisionMaker" + i).equalsIgnoreCase(id)) {
+                errors.addError(String.format("Invalid parameter w/ id '%s'", id));
+                return;
+            }
+            if (params.get(i - 1).getValues() == null || (params.get(i - 1).getValues() != null && params.get(i - 1).getValues().size() != 1)) {
+                errors.addError("Parameter decisionMaker" + i + " must have a single (real) value only");
+                return;
+            }
+            QualifiedValues<Double> weight = params.get(i - 1).getValues().convertToDouble();
+            double w = weight.get(0).getValue();
+
+            if (w < 0 || w > 1) {
+                errors.addError("Improper value of weight for one of decision makers");
+            }
+
+            weights.add(w);
+        }
+
+        inputs.weights = weights;
+    }
+
     private static void extractAlternativesValues(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
 
         Map<String, Double> singleFlow = new HashMap<>();
-        Map<String, Double> weights = new TreeMap<>();
         List<Map<String, Double>> flows = new ArrayList<>();
 
         int iterator = 0;
@@ -100,43 +136,36 @@ public class InputsHandler {
 
                 String id = al.id();
 
-                if(iterator < realAlternatives.size() * (xmcda.alternativesValuesList.size() -1)) {
-                    if (inputs.alternatives_ids.contains(id)) {
-                        singleFlow.put(id, z);
-                        if(iterator % inputs.alternatives_ids.size() == (realAlternatives.size()-1)) {
-                            if(singleFlow.size() < realAlternatives.size()) {
-                                errors.addError("There are too few flows values");
-                            }
-                            else {
-                                flows.add(singleFlow);
-                                singleFlow = new HashMap<>();
-                                decidentsIterator++;
-                            }
+                if (inputs.alternatives_ids.contains(id)) {
+                    singleFlow.put(id, z);
+                    if(iterator % inputs.alternatives_ids.size() == (realAlternatives.size()-1)) {
+                        if(singleFlow.size() < realAlternatives.size()) {
+                            errors.addError("There are too few flows values");
                         }
-                        iterator++;
+                        else {
+                            flows.add(singleFlow);
+                            singleFlow = new HashMap<>();
+                            decidentsIterator++;
+                        }
                     }
-                    else {
-                        errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
-                    }
-                }
-                else if(inputs.alternatives_ids.contains(id)) {
-                    weights.put(id, z);
-                    //if(iterator % inputs.alternatives_ids.size() == (inputs.alternatives_ids.size()-1) && iterator > inputs.alternatives_ids.size()) {
-                       // if(weights.size() < inputs.alternatives_ids.size()) {
-                           // errors.addError("There are too few weights");
-                        //}
-                   // }
                     iterator++;
                 }
                 else {
                     errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
                 }
+
             }
         }
 
-        flows.add(singleFlow);
+        if(flows.size() < 2) {
+            errors.addError("There should be at least two DMs and flows for them.");
+        }
+
+        if(flows.size() > inputs.weights.size()) {
+            errors.addError("There are too few weights comparing to flows");
+        }
+
         inputs.flows = flows;
-        inputs.weights = weights;
 
     }
 }
