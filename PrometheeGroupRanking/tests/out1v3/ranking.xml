@@ -6,7 +6,7 @@
 			<alternativeID>A</alternativeID>
 			<values>
 				<value>
-					<real>0.0263</real>
+					<real>0.037</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -14,7 +14,7 @@
 			<alternativeID>B</alternativeID>
 			<values>
 				<value>
-					<real>0.0306</real>
+					<real>0.044</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -22,7 +22,7 @@
 			<alternativeID>C</alternativeID>
 			<values>
 				<value>
-					<real>0.0349</real>
+					<real>0.051</real>
 				</value>
 			</values>
 		</alternativeValue>
