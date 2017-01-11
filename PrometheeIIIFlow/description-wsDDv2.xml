@@ -44,11 +44,9 @@
         <![CDATA[
 				<methodParameters>
 					<parameter id="alpha">
-						<values>
-							<value>
-								<real>%1</real>
-							</value>
-						</values>
+                        <value>
+                            <real>%1</real>
+                        </value>
 					</parameter>
 				</methodParameters>
 			]]>

@@ -30,18 +30,14 @@
         <![CDATA[
 				<methodParameters>
 					<parameter id="function">
-						<values>
-							<value>
-								<label>%1</label>
-							</value>
-						</values>
+                        <value>
+                            <label>%1</label>
+                        </value>
 					</parameter>
 					<parameter id="direction">
-						<values>
-							<value>
-								<label>%2</label>
-							</value>
-						</values>
+                        <value>
+                            <label>%2</label>
+                        </value>
 					</parameter>
 				</methodParameters>
 			]]>

@@ -39,11 +39,9 @@
         <![CDATA[
 		<methodParameters>
 			<parameter id="comparison_with" name="comparison_with">
-				<values>
-					<value>
-						<label>%1</label>
-					</value>
-				</values>
+                <value>
+                    <label>%1</label>
+                </value>
 			</parameter>
 		</methodParameters>
         ]]>
