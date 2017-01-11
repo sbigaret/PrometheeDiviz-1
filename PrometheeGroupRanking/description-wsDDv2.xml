@@ -85,7 +85,7 @@
       <xmcda tag="alternativesValues" />
     </input>
 
-    <input id="input45" name="method_parameters" displayName="method parameters"
+    <input id="method_parameters" name="method_parameters" displayName="method parameters"
            isoptional="0">
       <documentation>
         <description>A set of parameters provided to tune up the module's operation.</description>

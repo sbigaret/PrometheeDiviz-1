@@ -149,55 +149,55 @@
 	        ]]>
 		  </xmcda>
 		  <gui status="preferGUI">
-			  <entry id="%1" type="enum" displayName="comparison with profiles">
-				  <documentation>
-					  <description>Information if we are using central or boundary profiles.</description>
-				  </documentation>
-				  <items>
-					  <item id="central">
-						  <description>central profiles</description>
-						  <value>central</value>
-					  </item>
-					  <item id="bounding">
-						  <description>boundary profiles</description>
-						  <value>bounding</value>
-					  </item>
-				  </items>
-			  </entry>
-			  <entry id="%2" type="boolean" displayName="assign to a better class">
-				  <documentation>
-					  <description>Information if alternative will be assigned to a better class when the assignment
-						  is not
-						  clear. Works only if cutPoint does unclear output for alternative.
-					  </description>
-				  </documentation>
-				  <defaultValue>true</defaultValue>
-			  </entry>
-			  <entry id="%3" type="real" displayName="decision maker 1 weight">
+			  <entry id="%1" type="real" displayName="decision maker 1 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
 				  <defaultValue>0.0</defaultValue>
 				  <constraint>
 					  <description>An integer value.</description>
+					  <code>
+						  <![CDATA[ %1 >= 0 ]]>
+					  </code>
+				  </constraint>
+			  </entry>
+			  <entry id="%2" type="real" displayName="decision maker 2 weight:">
+				  <documentation>
+					  <description></description>
+				  </documentation>
+				  <defaultValue>0.0</defaultValue>
+				  <constraint>
+					  <description>An integer value.</description>
+					  <code>
+						  <![CDATA[ %2 >= 0 ]]>
+					  </code>
+				  </constraint>
+			  </entry>
+			  <entry id="%3" type="real" displayName="decision maker 3 weight:">
+				  <documentation>
+					  <description></description>
+				  </documentation>
+				  <defaultValue>0.0</defaultValue>
+				  <constraint>
+					  <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
 					  <code>
 						  <![CDATA[ %3 >= 0 ]]>
 					  </code>
 				  </constraint>
 			  </entry>
-			  <entry id="%4" type="real" displayName="decision maker 2 weight:">
+			  <entry id="%4" type="real" displayName="decision maker 4 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
 				  <defaultValue>0.0</defaultValue>
 				  <constraint>
-					  <description>An integer value.</description>
+					  <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
 					  <code>
 						  <![CDATA[ %4 >= 0 ]]>
 					  </code>
 				  </constraint>
 			  </entry>
-			  <entry id="%5" type="real" displayName="decision maker 3 weight:">
+			  <entry id="%5" type="real" displayName="decision maker 5 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
@@ -209,7 +209,7 @@
 					  </code>
 				  </constraint>
 			  </entry>
-			  <entry id="%6" type="real" displayName="decision maker 4 weight">
+			  <entry id="%6" type="real" displayName="decision maker 6 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
@@ -221,7 +221,7 @@
 					  </code>
 				  </constraint>
 			  </entry>
-			  <entry id="%7" type="real" displayName="decision maker 5 weight">
+			  <entry id="%7" type="real" displayName="decision maker 7 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
@@ -233,7 +233,7 @@
 					  </code>
 				  </constraint>
 			  </entry>
-			  <entry id="%8" type="real" displayName="decision maker 6 weight">
+			  <entry id="%8" type="real" displayName="decision maker 8 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
@@ -245,7 +245,7 @@
 					  </code>
 				  </constraint>
 			  </entry>
-			  <entry id="%9" type="real" displayName="decision maker 7 weight">
+			  <entry id="%9" type="real" displayName="decision maker 9 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
@@ -257,7 +257,7 @@
 					  </code>
 				  </constraint>
 			  </entry>
-			  <entry id="%10" type="real" displayName="decision maker 8 weight">
+			  <entry id="%10" type="real" displayName="decision maker 10 weight">
 				  <documentation>
 					  <description></description>
 				  </documentation>
@@ -266,30 +266,6 @@
 					  <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
 					  <code>
 						  <![CDATA[ %10 >= 0 ]]>
-					  </code>
-				  </constraint>
-			  </entry>
-			  <entry id="%11" type="real" displayName="decision maker 9 weight">
-				  <documentation>
-					  <description></description>
-				  </documentation>
-				  <defaultValue>0.0</defaultValue>
-				  <constraint>
-					  <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
-					  <code>
-						  <![CDATA[ %11 >= 0 ]]>
-					  </code>
-				  </constraint>
-			  </entry>
-			  <entry id="%12" type="real" displayName="decision maker 10 weight">
-				  <documentation>
-					  <description></description>
-				  </documentation>
-				  <defaultValue>0.0</defaultValue>
-				  <constraint>
-					  <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
-					  <code>
-						  <![CDATA[ %12 >= 0 ]]>
 					  </code>
 				  </constraint>
 			  </entry>
