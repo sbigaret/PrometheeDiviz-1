@@ -259,9 +259,11 @@ public class InputsHandler {
 
     @SuppressWarnings("rawtypes")
     private static void extractProfiles(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) {
+        Set<String> profiles = new HashSet<>();
         if (inputs.comparisonWith != ComparisonWithParam.ALTERNATIVES) {
             inputs.profiles_ids = new ArrayList<String>();
             for (CategoryProfile catProf : xmcda.categoriesProfilesList.get(0)) {
+                boolean hasLower = false;
                 if (inputs.comparisonWith == ComparisonWithParam.BOUNDARY_PROFILES) {
                     if ((catProf.getLowerBound() == null)&&(catProf.getUpperBound() == null)){
                         errors.addError("Upper Bound or Lower Bound Profile in categories profiles must be specified");
@@ -269,7 +271,8 @@ public class InputsHandler {
                     }
                     if (catProf.getLowerBound() != null) {
                         if (catProf.getLowerBound().getAlternative() != null) {
-                            inputs.profiles_ids.add(catProf.getLowerBound().getAlternative().id());
+                            hasLower = true;
+                            profiles.add(catProf.getLowerBound().getAlternative().id());
                         } else {
                             errors.addError("Alternative in Category Profile must be specified");
                             return;
@@ -277,7 +280,9 @@ public class InputsHandler {
                     }
                     if (catProf.getUpperBound() != null) {
                         if (catProf.getUpperBound().getAlternative() != null) {
-                            inputs.profiles_ids.add(catProf.getUpperBound().getAlternative().id());
+                            if(!hasLower) {
+                                profiles.add(catProf.getUpperBound().getAlternative().id());
+                            }
                         } else {
                             errors.addError("Alternative in Category Profile must be specified");
                             return;
@@ -298,6 +303,11 @@ public class InputsHandler {
                     }
                 }
             }
+
+            if (inputs.comparisonWith == ComparisonWithParam.BOUNDARY_PROFILES) {
+                inputs.profiles_ids.addAll(profiles);
+            }
+
             if (inputs.profiles_ids.isEmpty()) {
                 errors.addError("Profiles IDs is empty");
             }

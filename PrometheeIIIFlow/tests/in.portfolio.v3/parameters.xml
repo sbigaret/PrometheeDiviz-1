@@ -5,7 +5,7 @@
 		<parameter id="alpha">
 			<values>
 				<value>
-					<real>0.02</real>
+					<real>0.005</real>
 				</value>
 			</values>
 		</parameter>

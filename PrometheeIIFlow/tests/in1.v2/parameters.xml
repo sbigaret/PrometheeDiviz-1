@@ -6,7 +6,7 @@
 <methodParameters>
   <parameter id="comparison_with" name="comparison_with">
       <value>
-        <label>central_profiles</label>
+        <label>boundary_profiles</label>
       </value>
   </parameter>
 </methodParameters>

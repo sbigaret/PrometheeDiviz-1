@@ -29,14 +29,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a9</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a10</alternativeID>
 				<values>
 					<value>
@@ -53,14 +45,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a14</alternativeID>
 				<values>
 					<value>
@@ -69,31 +53,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a16</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -136,30 +96,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a8</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a10</alternativeID>
 				<values>
 					<value>
@@ -176,14 +112,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a14</alternativeID>
 				<values>
 					<value>
@@ -192,31 +120,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a16</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -292,14 +196,6 @@
 			</column>
 			<column>
 				<alternativeID>a10</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a11</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -545,14 +441,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a2</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a6</alternativeID>
 				<values>
 					<value>
@@ -577,14 +465,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a14</alternativeID>
 				<values>
 					<value>
@@ -593,31 +473,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a16</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -660,30 +516,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a8</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a10</alternativeID>
 				<values>
 					<value>
@@ -700,14 +532,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a14</alternativeID>
 				<values>
 					<value>
@@ -716,31 +540,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a16</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -775,14 +575,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a3</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a5</alternativeID>
 				<values>
 					<value>
@@ -872,14 +664,6 @@
 			</column>
 			<column>
 				<alternativeID>a18</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a19</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -914,14 +698,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a3</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a5</alternativeID>
 				<values>
 					<value>
@@ -1018,14 +794,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a19</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a20</alternativeID>
 				<values>
 					<value>
@@ -1046,14 +814,6 @@
 			</column>
 			<column>
 				<alternativeID>a2</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a3</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -1157,34 +917,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a19</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a20</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-		</row>
-		<row>
-			<alternativeID>a10</alternativeID>
-			<column>
-				<alternativeID>a12</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a14</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -1342,38 +1075,6 @@
 		<row>
 			<alternativeID>a12</alternativeID>
 			<column>
-				<alternativeID>a1</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a2</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a5</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a6</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a10</alternativeID>
 				<values>
 					<value>
@@ -1382,55 +1083,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a14</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a16</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a20</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -1473,30 +1126,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a8</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a10</alternativeID>
 				<values>
 					<value>
@@ -1553,14 +1182,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a19</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a20</alternativeID>
 				<values>
 					<value>
@@ -1573,14 +1194,6 @@
 			<alternativeID>a14</alternativeID>
 			<column>
 				<alternativeID>a1</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a2</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -1620,47 +1233,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a16</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a20</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -1696,30 +1269,6 @@
 			</column>
 			<column>
 				<alternativeID>a6</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a8</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -1826,30 +1375,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a8</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a10</alternativeID>
 				<values>
 					<value>
@@ -1866,39 +1391,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a14</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -1942,30 +1435,6 @@
 			</column>
 			<column>
 				<alternativeID>a6</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a8</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -2065,30 +1534,6 @@
 			</column>
 			<column>
 				<alternativeID>a6</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a8</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
 				<values>
 					<value>
 						<label>S</label>
@@ -2334,22 +1779,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a7</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a9</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a10</alternativeID>
 				<values>
 					<value>
@@ -2366,14 +1795,6 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a13</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a14</alternativeID>
 				<values>
 					<value>
@@ -2382,31 +1803,7 @@
 				</values>
 			</column>
 			<column>
-				<alternativeID>a15</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
 				<alternativeID>a16</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a17</alternativeID>
-				<values>
-					<value>
-						<label>S</label>
-					</value>
-				</values>
-			</column>
-			<column>
-				<alternativeID>a18</alternativeID>
 				<values>
 					<value>
 						<label>S</label>

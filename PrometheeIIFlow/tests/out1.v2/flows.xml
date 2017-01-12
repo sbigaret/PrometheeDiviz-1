@@ -20,15 +20,15 @@
             </value>
         </alternativeValue>
         <alternativeValue>
-            <alternativeID>pMG</alternativeID>
-            <value>
-                <real>0.5</real>
-            </value>
-        </alternativeValue>
-        <alternativeValue>
             <alternativeID>pBM</alternativeID>
             <value>
                 <real>0.0</real>
+            </value>
+        </alternativeValue>
+        <alternativeValue>
+            <alternativeID>pMG</alternativeID>
+            <value>
+                <real>0.5</real>
             </value>
         </alternativeValue>
     </alternativesValues>

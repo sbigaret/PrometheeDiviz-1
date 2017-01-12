@@ -6,10 +6,10 @@
 			<alternativeID>a11</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>0.0183</real>
+					<real>0.0221</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0286</real>
+					<real>0.0247</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -17,10 +17,10 @@
 			<alternativeID>a10</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0224</real>
+					<real>-0.0196</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.015</real>
+					<real>-0.0178</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -28,10 +28,10 @@
 			<alternativeID>a13</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0073</real>
+					<real>-0.0024</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0057</real>
+					<real>8.0E-4</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -39,10 +39,10 @@
 			<alternativeID>a12</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0176</real>
+					<real>-0.0135</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0065</real>
+					<real>-0.0107</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -50,10 +50,10 @@
 			<alternativeID>a15</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0083</real>
+					<real>-0.0043</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0023</real>
+					<real>-0.0016</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -61,10 +61,10 @@
 			<alternativeID>a14</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0161</real>
+					<real>-0.0115</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0038</real>
+					<real>-0.0084</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -72,10 +72,10 @@
 			<alternativeID>a17</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0092</real>
+					<real>-0.0043</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0039</real>
+					<real>-0.001</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -83,10 +83,10 @@
 			<alternativeID>a16</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0141</real>
+					<real>-0.0093</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0013</real>
+					<real>-0.0061</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -94,10 +94,10 @@
 			<alternativeID>a19</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>0.0043</real>
+					<real>0.0089</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0167</real>
+					<real>0.012</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -105,10 +105,10 @@
 			<alternativeID>a18</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0093</real>
+					<real>-0.0044</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0039</real>
+					<real>-0.001</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -116,10 +116,10 @@
 			<alternativeID>a1</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0143</real>
+					<real>-0.0099</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0027</real>
+					<real>-0.007</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -127,10 +127,10 @@
 			<alternativeID>a2</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0109</real>
+					<real>-0.0072</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0012</real>
+					<real>-0.0048</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -138,10 +138,10 @@
 			<alternativeID>a3</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>0.0062</real>
+					<real>0.0111</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0195</real>
+					<real>0.0145</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -149,10 +149,10 @@
 			<alternativeID>a4</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>0.0323</real>
+					<real>0.0348</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.039</real>
+					<real>0.0365</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -160,10 +160,10 @@
 			<alternativeID>a5</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0138</real>
+					<real>-0.0102</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0042</real>
+					<real>-0.0078</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -171,10 +171,10 @@
 			<alternativeID>a6</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0131</real>
+					<real>-0.0087</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0013</real>
+					<real>-0.0057</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -182,10 +182,10 @@
 			<alternativeID>a7</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0018</real>
+					<real>0.0027</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0103</real>
+					<real>0.0058</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -193,10 +193,10 @@
 			<alternativeID>a8</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0013</real>
+					<real>0.0031</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.0106</real>
+					<real>0.0061</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -204,10 +204,10 @@
 			<alternativeID>a9</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0028</real>
+					<real>0.002</real>
 				</value>
 				<value id="UpperFlow">
-					<real>0.01</real>
+					<real>0.0052</real>
 				</value>
 			</values>
 		</alternativeValue>
@@ -215,10 +215,10 @@
 			<alternativeID>a20</alternativeID>
 			<values>
 				<value id="LowerFlow">
-					<real>-0.0118</real>
+					<real>-0.0079</real>
 				</value>
 				<value id="UpperFlow">
-					<real>-0.0015</real>
+					<real>-0.0054</real>
 				</value>
 			</values>
 		</alternativeValue>
