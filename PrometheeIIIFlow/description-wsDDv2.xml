@@ -15,16 +15,16 @@
       <xmcda tag="alternatives"/>
     </input>
 
-    <input id="input2" name="negative_flow" displayName="negativeFlows" isoptional="0">
+    <input id="input2" name="positive_flow" displayName="positiveFlows" isoptional="0">
       <documentation>
-        <description>Negative flows of given alternatives and profiles.</description>
+        <description>Positive flows of given alternatives and profiles.</description>
       </documentation>
       <xmcda tag="alternativesValues"/>
     </input>
 
-    <input id="input3" name="positive_flow" displayName="positiveFlows" isoptional="0">
+    <input id="input3" name="negative_flow" displayName="negativeFlows" isoptional="0">
       <documentation>
-        <description>Positive flows of given alternatives and profiles.</description>
+        <description>Negative flows of given alternatives and profiles.</description>
       </documentation>
       <xmcda tag="alternativesValues"/>
     </input>
