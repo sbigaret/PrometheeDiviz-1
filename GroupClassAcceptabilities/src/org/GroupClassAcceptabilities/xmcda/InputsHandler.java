@@ -96,7 +96,7 @@ public class InputsHandler {
         Set<String> categories = new HashSet<>();
 
         int min = Integer.MAX_VALUE;
-        int max = -1;
+        int max = -Integer.MAX_VALUE;
 
         CategoriesValues<Integer> categoriesValues = xmcda.categoriesValuesList.get(0).convertTo(Integer.class);
 

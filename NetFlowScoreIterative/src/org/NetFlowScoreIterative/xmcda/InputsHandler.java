@@ -2,6 +2,7 @@ package org.NetFlowScoreIterative.xmcda;
 
 import org.NetFlowScoreIterative.structures.Triple;
 import org.xmcda.*;
+import org.xmcda.utils.Coord;
 import org.xmcda.utils.ValueConverters;
 
 import java.util.*;
@@ -126,11 +127,16 @@ public class InputsHandler {
 
         for(Alternative a : xmcda.alternatives) {
             for(Alternative b: xmcda.alternatives) {
-                QualifiedValues<?> v = xmcda.alternativesMatricesList.get(0).get(a, b).convertToDouble();
-                double w = v.get(0).convertToDouble().getValue();
+                if(xmcda.alternativesMatricesList.get(0).containsKey(new Coord<>(a,b))) {
+                    QualifiedValues<?> v = xmcda.alternativesMatricesList.get(0).get(a, b).convertToDouble();
+                    double w = v.get(0).convertToDouble().getValue();
 
-                Triple<String, String, Double> tuple = new Triple<>(a.id(), b.id(), w);
-                preferenceTable.add(tuple);
+                    Triple<String, String, Double> tuple = new Triple<>(a.id(), b.id(), w);
+                    preferenceTable.add(tuple);
+                }
+                else {
+                    errors.addError("Your preference table does not contain enough number of values.");
+                }
             }
         }
 
