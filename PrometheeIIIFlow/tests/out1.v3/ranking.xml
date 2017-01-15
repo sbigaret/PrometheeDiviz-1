@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2016/XMCDA-3.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.decision-deck.org/2016/XMCDA-3.0.2 http://www.decision-deck.org/xmcda/_downloads/XMCDA-3.0.2.xsd">
 
-<alternativesMatrix>
+<alternativesMatrix mcdaConcept="atLeastAsGoodAs">
 		<row>
 			<alternativeID>A</alternativeID>
 			<column>
 				<alternativeID>C</alternativeID>
 				<values>
 					<value>
-						<label>S</label>
+						<real>1.0</real>
 					</value>
 				</values>
 			</column>
@@ -19,7 +19,7 @@
 				<alternativeID>A</alternativeID>
 				<values>
 					<value>
-						<label>S</label>
+						<real>1.0</real>
 					</value>
 				</values>
 			</column>
@@ -27,7 +27,7 @@
 				<alternativeID>C</alternativeID>
 				<values>
 					<value>
-						<label>S</label>
+						<real>1.0</real>
 					</value>
 				</values>
 			</column>
@@ -38,7 +38,7 @@
 				<alternativeID>A</alternativeID>
 				<values>
 					<value>
-						<label>S</label>
+						<real>1.0</real>
 					</value>
 				</values>
 			</column>

@@ -9,14 +9,14 @@ import java.util.*;
 
 
 public class PrometheeIRanking {
-    public static Map<Pair<String, String>, String> calculatePrometheeIRanking(InputsHandler.Inputs inputs) {
+    public static Map<Pair<String, String>, Integer> calculatePrometheeIRanking(InputsHandler.Inputs inputs) {
 
         Map<String, Double> positiveFlow = inputs.positiveFlow;
         Map<String, Double> negativeFlow = inputs.negativeFlow;
 
         Map<String, Double> flow = countFlow(inputs);
 
-        Map<Pair<String, String>,String> result = new HashMap<>();
+        Map<Pair<String, String>,Integer> result = new HashMap<>();
 
         for (String alternativeA : inputs.alternatives_ids) {
             for (String alternativeB : inputs.alternatives_ids) {
@@ -30,7 +30,7 @@ public class PrometheeIRanking {
                         (positiveFlow.get(alternativeA).equals(positiveFlow.get(alternativeB))) &&
                         (negativeFlow.get(alternativeA).equals(negativeFlow.get(alternativeB)))) {
                             //result.put(alternativeA, flow.get(alternativeA));
-                            result.put(new Pair<>(alternativeA, alternativeB), "S");
+                            result.put(new Pair<>(alternativeA, alternativeB), 1);
                     }
                 }
             }

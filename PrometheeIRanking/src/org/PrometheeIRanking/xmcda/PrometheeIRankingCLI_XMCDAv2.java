@@ -56,7 +56,7 @@ public class PrometheeIRankingCLI_XMCDAv2 {
             Utils.writeProgramExecutionResultsAndExit(prgExecResultsFile, executionResult, Utils.XMCDA_VERSION.v2);
         }
 
-        final Map<Pair<String, String>, String> results ;
+        final Map<Pair<String, String>, Integer> results ;
         try
         {
             results = PrometheeIRanking.calculatePrometheeIRanking(inputs);

@@ -15,7 +15,7 @@ public class PrometheeIIIFlow {
         Map<String, Double> sigma = new LinkedHashMap<>();
         Map<String, Double> x_table = new LinkedHashMap<>();
         Map<String, Double> y_table = new LinkedHashMap<>();
-        Map<Pair<String, String>, String> result = new HashMap<>();
+        Map<Pair<String, String>, Integer> result = new HashMap<>();
         Map<String, Pair<Double, Double>> intervals = new HashMap<>();
         Object[] table_results = new Object[2];
         table_results[0] = result;
@@ -58,7 +58,7 @@ public class PrometheeIIIFlow {
             for (String alternativeB : inputs.alternatives_ids) {
                 if (!alternativeA.equalsIgnoreCase(alternativeB)) {
                     if(x_table.get(alternativeA) > y_table.get(alternativeB) || (x_table.get(alternativeA) <= y_table.get(alternativeB) && x_table.get(alternativeB) <= y_table.get(alternativeA))) {
-                        result.put(new Pair<>(alternativeA, alternativeB), "S");
+                        result.put(new Pair<>(alternativeA, alternativeB), 1);
                     }
                 }
             }

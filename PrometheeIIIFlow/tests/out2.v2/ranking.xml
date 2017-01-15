@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:XMCDA xmlns:ns2="http://www.decision-deck.org/2016/XMCDA-2.2.2">
-    <alternativesComparisons>
+    <alternativesComparisons mcdaConcept="atLeastAsGoodAs">
         <pairs>
             <pair>
                 <initial>
@@ -11,7 +11,7 @@
                 </terminal>
                 <values>
                     <value>
-                        <label>S</label>
+                        <real>1.0</real>
                     </value>
                 </values>
             </pair>
@@ -24,7 +24,7 @@
                 </terminal>
                 <values>
                     <value>
-                        <label>S</label>
+                        <real>1.0</real>
                     </value>
                 </values>
             </pair>
@@ -37,7 +37,7 @@
                 </terminal>
                 <values>
                     <value>
-                        <label>S</label>
+                        <real>1.0</real>
                     </value>
                 </values>
             </pair>
@@ -50,7 +50,7 @@
                 </terminal>
                 <values>
                     <value>
-                        <label>S</label>
+                        <real>1.0</real>
                     </value>
                 </values>
             </pair>

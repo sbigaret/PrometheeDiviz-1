@@ -62,26 +62,27 @@ public class OutputsHandler {
      */
     public static Map<String, XMCDA> convert(List<String> alternatives, Object[] table_results, ProgramExecutionResult executionResult)
     {
-        Map<Pair<String, String>, String> alternativesComparison = (Map<Pair<String, String>, String>) table_results[0];
+        Map<Pair<String, String>, Integer> alternativesComparison = (Map<Pair<String, String>, Integer>) table_results[0];
         Map<String, Pair<Double, Double>> intervals = (Map<String, Pair<Double, Double>>) table_results[1];
 
         final HashMap<String, XMCDA> x_results = new HashMap<>();
         XMCDA xmcda = new XMCDA();
-        AlternativesMatrix<String> result = new AlternativesMatrix<String>();
+        AlternativesMatrix<Double> result = new AlternativesMatrix<Double>();
 
         for(String alternative1: alternatives) {
             for (String alternative2 : alternatives) {
                 if (alternativesComparison.keySet().contains(new Pair<String, String>(alternative1, alternative2))) {
-                    String value = alternativesComparison.get(new Pair<String, String>(alternative1, alternative2));
+                    Double value = alternativesComparison.get(new Pair<String, String>(alternative1, alternative2)).doubleValue();
                     Alternative alt1 = new Alternative(alternative1);
                     Alternative alt2 = new Alternative(alternative2);
                     Coord<Alternative, Alternative> coord = new Coord<Alternative, Alternative>(alt1, alt2);
-                    QualifiedValues<String> values = new QualifiedValues<String>(new QualifiedValue<String>(value));
+                    QualifiedValues<Double> values = new QualifiedValues<Double>(new QualifiedValue<Double>(value));
                     result.put(coord, values);
                 }
             }
         }
 
+        result.setMcdaConcept("atLeastAsGoodAs");
         xmcda.alternativesMatricesList.add(result);
         x_results.put("ranking", xmcda);
 
