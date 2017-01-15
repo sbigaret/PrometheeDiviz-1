@@ -2,30 +2,30 @@
 <ns2:XMCDA xmlns:ns2="http://www.decision-deck.org/2016/XMCDA-2.2.2">
     <alternativesValues>
         <alternativeValue>
-            <alternativeID>A</alternativeID>
+            <alternativeID>a02</alternativeID>
             <value id="LowerFlow">
-                <real>0.0997</real>
+                <real>0.499</real>
             </value>
             <value id="UpperFlow">
-                <real>0.167</real>
+                <real>0.501</real>
             </value>
         </alternativeValue>
         <alternativeValue>
-            <alternativeID>B</alternativeID>
+            <alternativeID>a01</alternativeID>
             <value id="LowerFlow">
-                <real>0.184</real>
+                <real>-0.0031</real>
             </value>
             <value id="UpperFlow">
-                <real>0.2827</real>
+                <real>0.0031</real>
             </value>
         </alternativeValue>
         <alternativeValue>
-            <alternativeID>C</alternativeID>
+            <alternativeID>a03</alternativeID>
             <value id="LowerFlow">
-                <real>0.1098</real>
+                <real>-0.501</real>
             </value>
             <value id="UpperFlow">
-                <real>0.2235</real>
+                <real>-0.499</real>
             </value>
         </alternativeValue>
     </alternativesValues>

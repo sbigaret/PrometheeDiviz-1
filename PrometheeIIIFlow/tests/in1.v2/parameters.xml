@@ -5,7 +5,7 @@
 <methodParameters>
   <parameter name="alpha">
     <value>
-      <real>0.1</real>
+      <real>0.005</real>
     </value>
   </parameter>
 </methodParameters>

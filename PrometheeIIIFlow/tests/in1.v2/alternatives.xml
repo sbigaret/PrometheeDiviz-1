@@ -5,9 +5,9 @@
 	</projectReference>
 
 	<alternatives>
-		<alternative id="A" name="A" />
-		<alternative id="B" name="B" />
-		<alternative id="C" name="C" />
+		<alternative id="a01" name="a01" />
+		<alternative id="a02" name="a02" />
+		<alternative id="a03" name="a03" />
 	</alternatives>
 
 </xmcda:XMCDA>

@@ -29,13 +29,14 @@ public class PrometheeIIIFlow {
             double relative_flow = tuple.getValue()/alternativesSize;
             relativeFlow.put(tuple.getKey(), relative_flow);
         }
-
+        
         for (String alternativeA : inputs.alternatives_ids) {
             for (String alternativeB : inputs.alternatives_ids) {
                 if (!alternativeA.equalsIgnoreCase(alternativeB)) {
                     double current_sigma_value = sigma.getOrDefault(alternativeA, 0.0);
-                    double sigma_value = current_sigma_value + Math.pow((getValueFromAlternatives(alternativeA, alternativeB, inputs) -
-                            getValueFromAlternatives(alternativeB, alternativeA, inputs) - flow.get(alternativeA)),2);
+                    double temp = getValueFromAlternatives(alternativeA, alternativeB, inputs) -
+                            getValueFromAlternatives(alternativeB, alternativeA, inputs) - flow.get(alternativeA);
+                    double sigma_value = current_sigma_value + Math.pow(temp,2);
                     if(sigma.containsKey(alternativeA)) {
                         sigma.replace(alternativeA, current_sigma_value, sigma_value);
                     }
@@ -47,8 +48,8 @@ public class PrometheeIIIFlow {
             sigma.replace(alternativeA, sigma.get(alternativeA), sigma.get(alternativeA)/alternativesSize);
             sigma.replace(alternativeA, sigma.get(alternativeA), Math.sqrt(sigma.get(alternativeA)));
 
-            double temp_x = Format(relativeFlow.get(alternativeA) - inputs.alpha * sigma.get(alternativeA));
-            double temp_y = Format(relativeFlow.get(alternativeA) + inputs.alpha * sigma.get(alternativeA));
+            double temp_x = Format(flow.get(alternativeA) - inputs.alpha * sigma.get(alternativeA));
+            double temp_y = Format(flow.get(alternativeA) + inputs.alpha * sigma.get(alternativeA));
             x_table.put(alternativeA, temp_x);
             y_table.put(alternativeA, temp_y);
             intervals.put(alternativeA, new Pair<>(temp_x, temp_y));
@@ -78,14 +79,17 @@ public class PrometheeIIIFlow {
 
     private static Map<String, Double> countFlow(InputsHandler.Inputs inputs) {
 
-        Map<String, Double> positiveFlow = inputs.positiveFlow;
-        Map<String, Double> negativeFlow = inputs.negativeFlow;
-
         Map<String, Double> flow = new LinkedHashMap<>();
 
-        for (String alternative : inputs.alternatives_ids) {
-            double currentFlow = positiveFlow.get(alternative) - negativeFlow.get(alternative);
-            flow.put(alternative, currentFlow);
+        for (String alternativeA : inputs.alternatives_ids) {
+            double value = 0;
+            for (String alternativeB : inputs.alternatives_ids) {
+                if (!alternativeA.equalsIgnoreCase(alternativeB)) {
+                    value += (getValueFromAlternatives(alternativeA, alternativeB, inputs) - getValueFromAlternatives(alternativeB, alternativeA, inputs));
+                }
+            }
+            value = value/ inputs.alternatives_ids.size();
+            flow.put(alternativeA, value);
         }
 
         return flow;
