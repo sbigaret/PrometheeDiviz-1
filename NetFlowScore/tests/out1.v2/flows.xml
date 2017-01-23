@@ -3,21 +3,27 @@
     <alternativesValues>
         <alternativeValue>
             <alternativeID>A</alternativeID>
-            <value>
-                <real>0.1</real>
-            </value>
+            <values>
+                <value>
+                    <real>0.1</real>
+                </value>
+            </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>B</alternativeID>
-            <value>
-                <real>0.4</real>
-            </value>
+            <values>
+                <value>
+                    <real>0.4</real>
+                </value>
+            </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>C</alternativeID>
-            <value>
-                <real>0.1</real>
-            </value>
+            <values>
+                <value>
+                    <real>0.1</real>
+                </value>
+            </values>
         </alternativeValue>
     </alternativesValues>
 </ns2:XMCDA>
