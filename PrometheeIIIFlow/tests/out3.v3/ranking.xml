@@ -3,17 +3,6 @@
 
 <alternativesMatrix mcdaConcept="atLeastAsGoodAs">
 		<row>
-			<alternativeID>A</alternativeID>
-			<column>
-				<alternativeID>C</alternativeID>
-				<values>
-					<value>
-						<real>1.0</real>
-					</value>
-				</values>
-			</column>
-		</row>
-		<row>
 			<alternativeID>B</alternativeID>
 			<column>
 				<alternativeID>A</alternativeID>
@@ -23,8 +12,19 @@
 					</value>
 				</values>
 			</column>
+		</row>
+		<row>
+			<alternativeID>C</alternativeID>
 			<column>
-				<alternativeID>C</alternativeID>
+				<alternativeID>A</alternativeID>
+				<values>
+					<value>
+						<real>1.0</real>
+					</value>
+				</values>
+			</column>
+			<column>
+				<alternativeID>B</alternativeID>
 				<values>
 					<value>
 						<real>1.0</real>

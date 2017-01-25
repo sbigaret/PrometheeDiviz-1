@@ -32,16 +32,5 @@
 				</values>
 			</column>
 		</row>
-		<row>
-			<alternativeID>C</alternativeID>
-			<column>
-				<alternativeID>A</alternativeID>
-				<values>
-					<value>
-						<real>1.0</real>
-					</value>
-				</values>
-			</column>
-		</row>
 	</alternativesMatrix>
 </xmcda:XMCDA>

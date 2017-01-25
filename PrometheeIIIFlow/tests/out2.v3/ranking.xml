@@ -12,14 +12,6 @@
 					</value>
 				</values>
 			</column>
-			<column>
-				<alternativeID>C</alternativeID>
-				<values>
-					<value>
-						<real>1.0</real>
-					</value>
-				</values>
-			</column>
 		</row>
 		<row>
 			<alternativeID>C</alternativeID>

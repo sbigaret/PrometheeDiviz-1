@@ -5,10 +5,10 @@
             <alternativeID>A</alternativeID>
             <values>
                 <value id="LowerFlow">
-                    <real>0.0459</real>
+                    <real>-0.0376</real>
                 </value>
                 <value id="UpperFlow">
-                    <real>0.0875</real>
+                    <real>-0.029</real>
                 </value>
             </values>
         </alternativeValue>
@@ -16,10 +16,10 @@
             <alternativeID>B</alternativeID>
             <values>
                 <value id="LowerFlow">
-                    <real>0.1258</real>
+                    <real>0.0</real>
                 </value>
                 <value id="UpperFlow">
-                    <real>0.2075</real>
+                    <real>0.0</real>
                 </value>
             </values>
         </alternativeValue>
@@ -27,10 +27,10 @@
             <alternativeID>C</alternativeID>
             <values>
                 <value id="LowerFlow">
-                    <real>-0.0058</real>
+                    <real>0.029</real>
                 </value>
                 <value id="UpperFlow">
-                    <real>0.0058</real>
+                    <real>0.0376</real>
                 </value>
             </values>
         </alternativeValue>

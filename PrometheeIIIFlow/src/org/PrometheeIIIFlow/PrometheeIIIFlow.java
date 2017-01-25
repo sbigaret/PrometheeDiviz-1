@@ -29,7 +29,7 @@ public class PrometheeIIIFlow {
             double relative_flow = tuple.getValue()/alternativesSize;
             relativeFlow.put(tuple.getKey(), relative_flow);
         }
-        
+
         for (String alternativeA : inputs.alternatives_ids) {
             for (String alternativeB : inputs.alternatives_ids) {
                 if (!alternativeA.equalsIgnoreCase(alternativeB)) {
