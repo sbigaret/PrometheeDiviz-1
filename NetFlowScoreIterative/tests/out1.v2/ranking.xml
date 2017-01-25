@@ -3,21 +3,27 @@
     <alternativesValues>
         <alternativeValue>
             <alternativeID>B</alternativeID>
-            <value>
-                <integer>1</integer>
-            </value>
+            <values>
+                <value>
+                    <integer>1</integer>
+                </value>
+            </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>A</alternativeID>
-            <value>
-                <integer>3</integer>
-            </value>
+            <values>
+                <value>
+                    <integer>3</integer>
+                </value>
+            </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>C</alternativeID>
-            <value>
-                <integer>2</integer>
-            </value>
+            <values>
+                <value>
+                    <integer>2</integer>
+                </value>
+            </values>
         </alternativeValue>
     </alternativesValues>
 </ns2:XMCDA>
