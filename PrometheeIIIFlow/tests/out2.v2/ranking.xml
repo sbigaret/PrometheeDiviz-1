@@ -17,19 +17,6 @@
             </pair>
             <pair>
                 <initial>
-                    <alternativeID>B</alternativeID>
-                </initial>
-                <terminal>
-                    <alternativeID>C</alternativeID>
-                </terminal>
-                <values>
-                    <value>
-                        <real>1.0</real>
-                    </value>
-                </values>
-            </pair>
-            <pair>
-                <initial>
                     <alternativeID>C</alternativeID>
                 </initial>
                 <terminal>

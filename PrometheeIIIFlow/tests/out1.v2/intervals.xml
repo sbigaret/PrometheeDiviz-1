@@ -3,30 +3,36 @@
     <alternativesValues>
         <alternativeValue>
             <alternativeID>a02</alternativeID>
-            <value id="LowerFlow">
-                <real>0.499</real>
-            </value>
-            <value id="UpperFlow">
-                <real>0.501</real>
-            </value>
+            <values>
+                <value id="LowerFlow">
+                    <real>0.499</real>
+                </value>
+                <value id="UpperFlow">
+                    <real>0.501</real>
+                </value>
+            </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a01</alternativeID>
-            <value id="LowerFlow">
-                <real>-0.0031</real>
-            </value>
-            <value id="UpperFlow">
-                <real>0.0031</real>
-            </value>
+            <values>
+                <value id="LowerFlow">
+                    <real>-0.0031</real>
+                </value>
+                <value id="UpperFlow">
+                    <real>0.0031</real>
+                </value>
+            </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a03</alternativeID>
-            <value id="LowerFlow">
-                <real>-0.501</real>
-            </value>
-            <value id="UpperFlow">
-                <real>-0.499</real>
-            </value>
+            <values>
+                <value id="LowerFlow">
+                    <real>-0.501</real>
+                </value>
+                <value id="UpperFlow">
+                    <real>-0.499</real>
+                </value>
+            </values>
         </alternativeValue>
     </alternativesValues>
 </ns2:XMCDA>
