@@ -4,7 +4,7 @@
   <program provider="PUT" name="PrometheeIRanking" displayName="PrometheeIRanking" version="1.0.0" />
   <documentation>
     <description>
-    	Outranking relations in Promethee I.
+      This module is calculating ranking using Promethee I method. The result is shown as the table of outranking relationship, where the relationship is a weak preference.
     </description>
     <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>

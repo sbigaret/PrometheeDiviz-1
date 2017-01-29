@@ -4,7 +4,7 @@
   <program provider="PUT" name="GroupClassAcceptabilities" displayName="GroupClassAcceptabilities" version="1.0.0" />
   <documentation>
     <description>
-		Module for calculation group class acceptabilities.
+		Module for calculation group class acceptabilities basing on the assignments to classes of each decision maker.
     </description>
 	  <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
 	  <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>

@@ -3,8 +3,8 @@
                      xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 http://www.decision-deck.org/ws/_downloads/description.xsd">
   <program provider="PUT" name="PrometheeIRanking" displayName="PrometheeIRanking" version="1.0.0"/>
   <documentation>
-    <description>Outranking relations in Promethee I.</description>
-    <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
+    <description>This module is calculating ranking using Promethee I method. The result is shown as the table of outranking relationship, where the relationship is a weak preference.</description>
+  <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
   </documentation>
   <parameters>

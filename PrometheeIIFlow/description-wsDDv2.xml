@@ -3,7 +3,7 @@
                      xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 http://www.decision-deck.org/ws/_downloads/description.xsd">
   <program provider="PUT" name="PrometheeIIFlow" displayName="PrometheeIIFlow" version="1.0.0"/>
   <documentation>
-    <description>Final flows in Promethee II.</description>
+    <description>Final flows calculated with Promethee II method as a difference of positive and negative outranking flows.</description>
     <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
   </documentation>

@@ -4,7 +4,7 @@
   <program provider="PUT" name="PrometheeIIFlow" displayName="PrometheeIIFlow" version="1.0.0" />
   <documentation>
     <description>
-    	Final flows in Promethee II.
+    	Final flows calculated with Promethee II method as a difference of positive and negative outranking flows.
     </description>
     <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
