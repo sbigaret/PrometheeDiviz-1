@@ -12,6 +12,22 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Copyright Sébastien Bigaret, Patrick Meyer, 2016
+ *
+ * This software is an implementation in Java of the weighted sum, using the
+ * XMCDA-java library.
+ *
+ * It is licenced under the European Union Public Licence (EUPL) v1.1.
+ *
+ * You'll find in this directory the English version and the French version of
+ * the licence.
+ *
+ * The EUPL is available in 22 official languages of the European Union;
+ * for more information about the EUPL, please refer to its website:
+ * https://joinup.ec.europa.eu/community/eupl/home
+ */
+
 public class Utils
 {
     public enum XMCDA_VERSION
