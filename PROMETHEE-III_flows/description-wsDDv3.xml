@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="../../docs/w3-ws/specificationData/description.xsd">
-  <program provider="PUT" name="PrometheeIIIFlow" displayName="PrometheeIIIFlow" version="1.0.0" />
+  <program provider="PUT" name="PROMETHEE-III_flows" displayName="PROMETHEE-III_flows" version="1.0.0" />
   <documentation>
     <description>
         This module is calculating ranking using Promethee III method. The result is shown as the table of outranking relationship, where the relationship is a weak preference. The second output presents the limits of the interval for every alternative.
