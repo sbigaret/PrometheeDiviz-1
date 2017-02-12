@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                      xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 http://www.decision-deck.org/ws/_downloads/description.xsd">
-  <program provider="PUT" name="PrometheeIIIFlow" displayName="PrometheeIIIFlow" version="1.0.0"/>
+  <program provider="PUT" name="PROMETHEE-III_flows" displayName="PROMETHEE-III_flows" version="1.0.0"/>
   <documentation>
     <description>This module is calculating ranking using Promethee III method. The result is shown as the table of outranking relationship, where the relationship is a weak preference. The second output presents the limits of the interval for every alternative.</description>
     <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>

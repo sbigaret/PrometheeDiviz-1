@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="../../docs/w3-ws/specificationData/description.xsd">
-  <program provider="PUT" name="NetFlowScoreIterative" displayName="NetFlowScoreIterative" version="1.0.0" />
+  <program provider="PUT" name="NetFlow-Iterative_ranking" displayName="NetFlow-Iterative_ranking" version="1.0.0" />
   <documentation>
     <description>
 		Module for calculation flows of Net Flow Score in iterative way using chosen function and direction in parameters. Basing on them, there are designated positions in a ranking for each alternative.

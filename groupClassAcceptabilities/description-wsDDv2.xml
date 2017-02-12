@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                      xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 http://www.decision-deck.org/ws/_downloads/description.xsd">
-  <program provider="PUT" name="GroupClassAcceptabilities" displayName="GroupClassAcceptabilities" version="1.0.0"/>
+  <program provider="PUT" name="groupClassAcceptabilities" displayName="groupClassAcceptabilities" version="1.0.0"/>
   <documentation>
     <description>Module for calculation group class acceptabilities basing on the assignments to classes of each decision maker.</description>
     <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>

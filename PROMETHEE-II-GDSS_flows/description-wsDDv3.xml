@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="../../docs/w3-ws/specificationData/description.xsd">
-  <program provider="PUT" name="PrometheeGroupRanking" displayName="PrometheeGroupRanking" version="1.0.0" />
+  <program provider="PUT" name="PROMETHEE-II-GDSS_flows" displayName="PROMETHEE-II-GDSS_flows" version="1.0.0" />
   <documentation>
     <description>Module for calculation PROMETHEE group ranking as a weighted sum of flows from every decision maker for each alternative.</description>
 	  <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                      xsi:schemaLocation="http://www.decision-deck.org/2009/XMCDA-2.0.0 http://www.decision-deck.org/ws/_downloads/description.xsd">
-  <program provider="PUT" name="NetFlowScore" displayName="NetFlowScore" version="1.0.0"/>
+  <program provider="PUT" name="NetFlow-Iterative_ranking" displayName="NetFlow-Iterative_ranking" version="1.0.0"/>
   <documentation>
-    <description>Module for calculation flows of Net Flow Score using chosen function and direction in parameters.</description>
+    <description>Module for calculation flows of Net Flow Score in iterative way using chosen function and direction in parameters. Basing on them, there are designated positions in a ranking for each alternative.</description>
     <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
   </documentation>
@@ -22,7 +22,7 @@
       <xmcda tag="alternativesComparisons" />
     </input>
 
-    <input id="input3" name="parameters" displayName="parameters" isoptional="0">
+    <input id="input3" name="parameters" displayName="methodParameters" isoptional="0">
       <documentation>
         <description>First parameter specifies the current function from {max, min, sum}. Second parameter specifies direction of the calculation from {in favor, against, difference}.</description>
       </documentation>
@@ -80,9 +80,9 @@
       </gui>
     </input>
 
-    <output id="output1" name="flows" displayName="flows">
+    <output id="output1" name="ranking" displayName="ranking">
       <documentation>
-        <description>Final flows computed from the given data.</description>
+        <description>Final ranking computed from the given data.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </output>
