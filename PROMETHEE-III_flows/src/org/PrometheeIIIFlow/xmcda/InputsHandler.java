@@ -37,7 +37,6 @@ public class InputsHandler {
     {
         Inputs inputs = new Inputs();
         checkAlternatives(xmcda, errors);
-        checkAlternativesValues(xmcda, errors);
         checkParameters(xmcda, errors);
         checkPreferences(xmcda, errors);
 
@@ -52,14 +51,6 @@ public class InputsHandler {
         }
         if (xmcda.alternatives.getActiveAlternatives().size() == 0) {
             errors.addError("No active alternatives found");
-            return;
-        }
-    }
-
-    private static void checkAlternativesValues(XMCDA xmcda, ProgramExecutionResult errors) {
-
-        if(xmcda.alternativesValuesList.size() == 0){
-            errors.addError("No flows found");
             return;
         }
     }
@@ -84,7 +75,6 @@ public class InputsHandler {
     protected static Inputs extractInputs(Inputs inputs, XMCDA xmcda, ProgramExecutionResult xmcda_execution_results) throws ValueConverters.ConversionException {
 
         extractAlternatives(inputs, xmcda, xmcda_execution_results);
-        extractFlows(inputs, xmcda, xmcda_execution_results);
         extractParameters(inputs, xmcda, xmcda_execution_results);
         extractPreferences(inputs, xmcda, xmcda_execution_results);
 
@@ -105,49 +95,6 @@ public class InputsHandler {
         }
 
         inputs.alternatives_ids = alternatives_ids;
-    }
-
-    private static void extractFlows(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {
-
-        Map<String, Double> positiveFlow = new HashMap<>();
-        Map<String, Double> negativeFlow = new HashMap<>();
-
-        int iterator = 0;
-        for(AlternativesValues flow : xmcda.alternativesValuesList) {
-
-            Set<Alternative> alt = flow.getAlternatives();
-            for(Alternative al : alt) {
-                LabelledQValues x = (LabelledQValues) flow.get(al);
-                QualifiedValue y = (QualifiedValue) x.get(0);
-                double z = (double) y.getValue();
-
-                String id = al.id();
-
-                if(iterator < inputs.alternatives_ids.size()) {
-                    if (inputs.alternatives_ids.contains(id)) {
-                        positiveFlow.put(id, z);
-                        iterator++;
-                    }
-                    else {
-                        errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
-                    }
-                }
-                else if(inputs.alternatives_ids.contains(id)) {
-                    negativeFlow.put(id, z);
-                    iterator++;
-                }
-                else {
-                    errors.addError("You have alternative in your flows that is not in your input file with alternatives. Check this out.");
-                }
-            }
-        }
-        if (negativeFlow.size() < inputs.alternatives_ids.size() || positiveFlow.size() < inputs.alternatives_ids.size()) {
-            errors.addError("There are to few values in flows");
-        }
-        else {
-            inputs.positiveFlow = positiveFlow;
-            inputs.negativeFlow = negativeFlow;
-        }
     }
 
     private static void extractParameters(Inputs inputs, XMCDA xmcda, ProgramExecutionResult errors) throws ValueConverters.ConversionException {

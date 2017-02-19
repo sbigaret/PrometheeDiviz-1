@@ -24,10 +24,6 @@ public class PrometheeIIIFlowCLI_XMCDAv3 {
         final XMCDA xmcda = new XMCDA();
         Utils.loadXMCDAv3(xmcda, new File(indir, "alternatives.xml"), true,
                 executionResult, "alternatives");
-        Utils.loadXMCDAv3(xmcda, new File(indir, "positive_flow.xml"), true,
-                executionResult, "alternativesValues");
-        Utils.loadXMCDAv3(xmcda, new File(indir, "negative_flow.xml"), true,
-                executionResult, "alternativesValues");
         Utils.loadXMCDAv3(xmcda, new File(indir, "preferences.xml"), true,
                 executionResult, "alternativesMatrix");
         Utils.loadXMCDAv3(xmcda, new File(indir, "parameters.xml"), true,
