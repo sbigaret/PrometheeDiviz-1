@@ -24,7 +24,10 @@ public class GroupClassAcceptabilitiesCLI_XMCDAv3 {
         Utils.loadXMCDAv3(xmcda, new File(indir, "alternatives.xml"), true,
                 executionResult, "alternatives");
 
-        Utils.loadXMCDAv3(xmcda, new File(indir, "categories.xml"), true,
+        Utils.loadXMCDAv3(xmcda, new File(indir, "categories.xml"), false,
+                executionResult, "categories");
+
+        Utils.loadXMCDAv3(xmcda, new File(indir, "categories_values.xml"), true,
                 executionResult, "categoriesValues");
 
         for(int i = 1; i < 11; i++) {
