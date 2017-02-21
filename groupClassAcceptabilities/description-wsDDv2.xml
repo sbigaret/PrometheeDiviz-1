@@ -4,6 +4,11 @@
   <program provider="PUT" name="groupClassAcceptabilities" displayName="groupClassAcceptabilities" version="1.0.0"/>
   <documentation>
     <description>Module for calculation group class acceptabilities basing on the assignments to classes of each decision maker.</description>
+    <reference>
+      S. Damart, L.C. Dias and V. Mousseau; Supporting groups in sorting
+      decisions: Methodology and use of a multi-criteria aggregation/disaggregation DSS.;
+      Decision Support Systems 43 (2007) 1464?1475
+    </reference>
     <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
   </documentation>
@@ -15,70 +20,70 @@
       <xmcda tag="alternatives"/>
     </input>
 
-    <input id="input2" name="assignments_1" displayName="assignments1" isoptional="0">
+    <input id="input2" name="assignments_1" displayName="assignments 1" isoptional="0">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 1.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input3" name="assignments_2" displayName="assignments2" isoptional="0">
+    <input id="input3" name="assignments_2" displayName="assignments 2" isoptional="0">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 2.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input4" name="assignments_3" displayName="assignments3" isoptional="1">
+    <input id="input4" name="assignments_3" displayName="assignments 3" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 3.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input5" name="assignments_4" displayName="assignments4" isoptional="1">
+    <input id="input5" name="assignments_4" displayName="assignments 4" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 4.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input6" name="assignments_5" displayName="assignments5" isoptional="1">
+    <input id="input6" name="assignments_5" displayName="assignments 5" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 5.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input7" name="assignments_6" displayName="assignments6" isoptional="1">
+    <input id="input7" name="assignments_6" displayName="assignments 6" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 6.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input8" name="assignments_7" displayName="assignments7" isoptional="1">
+    <input id="input8" name="assignments_7" displayName="assignments 7" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 7.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input9" name="assignments_8" displayName="assignments8" isoptional="1">
+    <input id="input9" name="assignments_8" displayName="assignments 8" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 8.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input10" name="assignments_9" displayName="assignments9" isoptional="1">
+    <input id="input10" name="assignments_9" displayName="assignments 9" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 9.</description>
       </documentation>
       <xmcda tag="alternativesAffectations" />
     </input>
 
-    <input id="input11" name="assignments_10" displayName="assignments10" isoptional="1">
+    <input id="input11" name="assignments_10" displayName="assignments 10" isoptional="1">
       <documentation>
         <description>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 10.</description>
       </documentation>
@@ -99,14 +104,14 @@
       <xmcda tag="categoriesValues" />
     </input>
 
-    <output id="output1" name="alternatives_support" displayName="alternativesSupport">
+    <output id="output1" name="alternatives_support" displayName="alternatives support">
       <documentation>
         <description>Alternatives support represented as percentage value</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </output>
 
-    <output id="output2" name="unimodal_alternatives_support" displayName="unimodalAlternativesSupport">
+    <output id="output2" name="unimodal_alternatives_support" displayName="unimodal slternatives support">
       <documentation>
         <description>Unimodal alternatives support represented as percentage value</description>
       </documentation>
