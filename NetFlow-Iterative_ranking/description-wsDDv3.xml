@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="../../docs/w3-ws/specificationData/description.xsd">
-  <program provider="PUT" name="NetFlow-Iterative_ranking" displayName="NetFlow-Iterative_ranking" version="1.0.0" />
+<?xml version='1.0' encoding='utf-8'?>
+<program_description>
+  <program provider="PUT" name="NetFlow-Iterative_ranking" version="1.0.0" displayName="NetFlow-Iterative_ranking" />
   <documentation>
-    <description>
-		Module for calculation flows of Net Flow Score in iterative way using chosen function and direction in parameters. Basing on them, there are designated positions in a ranking for each alternative.
-    </description>
-	  <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
-	  <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
+    <description>Module for calculation flows of Net Flow Score in iterative way using chosen function and direction in parameters. Basing on them, there are designated positions in a ranking for each alternative.</description>
+    <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
+    <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
   </documentation>
   <parameters>
 
@@ -18,19 +15,19 @@
       <xmcda tag="alternatives" />
     </input>
 
-	<input id="input2" name="preferences" displayName="preferences" isoptional="0">
+    <input id="input2" name="preferences" displayName="preferences" isoptional="0">
       <documentation>
         <description>Aggregated preferences matrix.</description>
       </documentation>
       <xmcda tag="alternativesMatrix" />
     </input>
 
-	<input id="input3" name="parameters" displayName="methodParameters" isoptional="0">
-		<documentation>
-			<description>First parameter specifies the current function from {max, min, sum}. Second parameter specifies direction of the calculation from {in favor, against, difference}.</description>
-		</documentation>
-		<xmcda tag="programParameters">
-			<![CDATA[
+    <input id="input3" name="parameters" displayName="methodParameters" isoptional="0">
+      <documentation>
+        <description>First parameter specifies the current function from {max, min, sum}. Second parameter specifies direction of the calculation from {in favor, against, difference}.</description>
+      </documentation>
+      <xmcda tag="programParameters"><![CDATA[
+			
 				<programParameters>
 					<parameter id="function">
 						<values>
@@ -47,45 +44,45 @@
 						</values>
 					</parameter>
 				</programParameters>
-			]]>
-		</xmcda>
-		<gui status="preferGUI">
-			<entry id="%1" type="enum" displayName="function">
-				<items>
-					<item id="item0">
-						<description>maximum</description>
-						<value>max</value>
-					</item>
-					<item id="item1">
-						<description>minimum</description>
-						<value>min</value>
-					</item>
-					<item id="item2">
-						<description>sum</description>
-						<value>sum</value>
-					</item>
-				</items>
-			<defaultValue>item0</defaultValue>
-			</entry>
-			<entry id="%2" type="enum" displayName="direction">
-				<items>
-					<item id="item0">
-						<description>direction in favor</description>
-						<value>in favor</value>
-					</item>
-					<item id="item1">
-						<description>direction against</description>
-						<value>against</value>
-					</item>
-					<item id="item2">
-						<description>difference</description>
-						<value>difference</value>
-					</item>
-				</items>
-			<defaultValue>item0</defaultValue>
-			</entry>
-		</gui>
-	</input>
+			
+		]]></xmcda>
+      <gui status="preferGUI">
+        <entry id="%1" type="enum" displayName="function">
+          <items>
+            <item id="item0">
+              <description>maximum</description>
+              <value>max</value>
+            </item>
+            <item id="item1">
+              <description>minimum</description>
+              <value>min</value>
+            </item>
+            <item id="item2">
+              <description>sum</description>
+              <value>sum</value>
+            </item>
+          </items>
+          <defaultValue>item0</defaultValue>
+        </entry>
+        <entry id="%2" type="enum" displayName="direction">
+          <items>
+            <item id="item0">
+              <description>direction in favor</description>
+              <value>in favor</value>
+            </item>
+            <item id="item1">
+              <description>direction against</description>
+              <value>against</value>
+            </item>
+            <item id="item2">
+              <description>difference</description>
+              <value>difference</value>
+            </item>
+          </items>
+          <defaultValue>item0</defaultValue>
+        </entry>
+      </gui>
+    </input>
 
     <output id="output1" name="ranking" displayName="ranking">
       <documentation>
