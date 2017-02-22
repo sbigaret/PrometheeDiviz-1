@@ -111,7 +111,7 @@
       <xmcda tag="alternativesValues" />
     </output>
 
-    <output id="output2" name="unimodal_alternatives_support" displayName="unimodal slternatives support">
+    <output id="output2" name="unimodal_alternatives_support" displayName="unimodal alternatives support">
       <documentation>
         <description>Unimodal alternatives support represented as percentage value</description>
       </documentation>
