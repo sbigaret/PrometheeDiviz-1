@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<program_description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="../../docs/w3-ws/specificationData/description.xsd">
-  <program provider="PUT" name="PROMETHEE-III_flows" displayName="PROMETHEE-III_flows" version="1.0.0" />
+<?xml version='1.0' encoding='utf-8'?>
+<program_description>
+  <program provider="PUT" name="PROMETHEE-III_flows" version="1.0.0" displayName="PROMETHEE-III_flows" />
   <documentation>
-    <description>
-        This module is calculating ranking using Promethee III method. The result is shown as the table of outranking relationship, where the relationship is a weak preference. The second output presents the limits of the interval for every alternative.
-    </description>
-      <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
-      <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
+    <description>This module is calculating ranking using Promethee III method. The result is shown as the table of outranking relationship, where the relationship is a weak preference. The second output presents the limits of the interval for every alternative.</description>
+    <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
+    <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
   </documentation>
   <parameters>
 
@@ -18,19 +15,19 @@
       <xmcda tag="alternatives" />
     </input>
 
-	<input id="input2" name="preferences" displayName="preferences" isoptional="0">
+    <input id="input2" name="preferences" displayName="preferences" isoptional="0">
       <documentation>
         <description>Aggregated preferences matrix.</description>
       </documentation>
       <xmcda tag="alternativesMatrix" />
     </input>
 
-	<input id="input3" name="parameters" displayName="method parameters" isoptional="0">
-		<documentation>
-			<description>Parameter alpha required in Promethee III flows calculation.</description>
-		</documentation>
-		<xmcda tag="programParameters">
-			<![CDATA[
+    <input id="input3" name="parameters" displayName="method parameters" isoptional="0">
+      <documentation>
+        <description>Parameter alpha required in Promethee III flows calculation.</description>
+      </documentation>
+      <xmcda tag="programParameters"><![CDATA[
+			
 				<programParameters>
 					<parameter id="alpha">
 						<values>
@@ -40,30 +37,30 @@
 						</values>
 					</parameter>
 				</programParameters>
-			]]>
-		</xmcda>
-		<gui status="preferGUI">
-			<entry id="%1" type="float" displayName="alpha">
-				<documentation>
-					<description>An alpha parameter.</description>
-				</documentation>
-				<defaultValue>0.0</defaultValue>
-			</entry>
-		</gui>
-	</input>
+			
+		]]></xmcda>
+      <gui status="preferGUI">
+        <entry id="%1" type="float" displayName="alpha">
+          <documentation>
+            <description>An alpha parameter.</description>
+          </documentation>
+          <defaultValue>0.0</defaultValue>
+        </entry>
+      </gui>
+    </input>
+
+    <output id="output2" name="intervals" displayName="intervals">
+      <documentation>
+        <description>Flows final intervals.</description>
+      </documentation>
+      <xmcda tag="alternativesValues" />
+    </output>
 
     <output id="output1" name="ranking" displayName="ranking">
       <documentation>
         <description>Result computed from the given data.</description>
       </documentation>
       <xmcda tag="alternativesMatrix" />
-    </output>
-
-    <output id="output2" name="intervals" displayName="intervals">
-      <documentation>
-          <description>Flows final intervals.</description>
-      </documentation>
-      <xmcda tag="alternativesValues" />
     </output>
 
     <output id="output3" name="messages" displayName="messages">

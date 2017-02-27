@@ -3,48 +3,54 @@
     <alternativesValues>
         <alternativeValue>
             <alternativeID>a1</alternativeID>
-            <value id="C3">
-                <label>50%</label>
-            </value>
-            <value id="C4">
-                <label>50%</label>
-            </value>
-            <value id="C1">
-                <label>0%</label>
-            </value>
-            <value id="C2">
-                <label>100%</label>
-            </value>
+            <values>
+                <value id="C3">
+                    <label>50%</label>
+                </value>
+                <value id="C4">
+                    <label>50%</label>
+                </value>
+                <value id="C1">
+                    <label>0%</label>
+                </value>
+                <value id="C2">
+                    <label>100%</label>
+                </value>
+            </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a2</alternativeID>
-            <value id="C3">
-                <label>100%</label>
-            </value>
-            <value id="C4">
-                <label>0%</label>
-            </value>
-            <value id="C1">
-                <label>50%</label>
-            </value>
-            <value id="C2">
-                <label>100%</label>
-            </value>
+            <values>
+                <value id="C3">
+                    <label>100%</label>
+                </value>
+                <value id="C4">
+                    <label>0%</label>
+                </value>
+                <value id="C1">
+                    <label>50%</label>
+                </value>
+                <value id="C2">
+                    <label>100%</label>
+                </value>
+	    </values>
         </alternativeValue>
         <alternativeValue>
             <alternativeID>a3</alternativeID>
-            <value id="C3">
-                <label>100%</label>
-            </value>
-            <value id="C4">
-                <label>50%</label>
-            </value>
-            <value id="C1">
-                <label>0%</label>
-            </value>
-            <value id="C2">
-                <label>0%</label>
-            </value>
+            <values>
+                <value id="C3">
+                    <label>100%</label>
+                </value>
+                <value id="C4">
+                    <label>50%</label>
+                </value>
+                <value id="C1">
+                    <label>0%</label>
+                </value>
+                <value id="C2">
+                    <label>0%</label>
+                </value>
+            </values>
         </alternativeValue>
     </alternativesValues>
 </ns2:XMCDA>
