@@ -5,6 +5,7 @@
     <description>Final flows calculated with Promethee II method as a difference of positive and negative outranking flows.</description>
     <contact><![CDATA[Magdalena Dzi?cielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
+    <reference>J.-P. Brans and B. Mareschal, 2005. PROMETHEE methods. In J. Figueira, S. Greco, M. Ehrgott, editors, Multiple Criteria Decision Analysis. State of the Art Surveys, 163–195. Springer, New York, USA.</reference>
   </documentation>
   <parameters>
 
@@ -55,7 +56,7 @@
         
       ]]></xmcda>
       <gui status="preferGUI">
-        <entry id="%1" type="enum" displayName="comparisonWith">
+        <entry id="%1" type="enum" displayName="comparison with">
           <items>
             <item id="item0">
               <description>alternatives vs alternatives</description>
