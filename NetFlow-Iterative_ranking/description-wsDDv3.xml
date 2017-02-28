@@ -5,6 +5,7 @@
     <description>Module for calculation flows of Net Flow Score in iterative way using chosen function and direction in parameters. Basing on them, there are designated positions in a ranking for each alternative.</description>
     <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
+    <reference>M. Kadziński and M. Michalski, 2016. Scoring procedures for multiple criteria decision aiding with robust and stochastic ordinal regression. Computers & Operations Research 71, 54–70.</reference>
   </documentation>
   <parameters>
 
@@ -22,7 +23,7 @@
       <xmcda tag="alternativesMatrix" />
     </input>
 
-    <input id="input3" name="parameters" displayName="methodParameters" isoptional="0">
+    <input id="input3" name="parameters" displayName="method parameters" isoptional="0">
       <documentation>
         <description>First parameter specifies the current function from {max, min, sum}. Second parameter specifies direction of the calculation from {in favor, against, difference}.</description>
       </documentation>
