@@ -21,6 +21,7 @@
         <description>Flows for decision maker 1.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
+      <dep>(nbEntries:value>=1)</dep>
     </input>
 
     <input id="flows_2" name="flows_2" displayName="flows 2" isoptional="0">
@@ -28,6 +29,7 @@
         <description>Flows for decision maker 2.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
+      <dep>(nbEntries:value>=2)</dep>
     </input>
 
     <input id="flows_3" name="flows_3" displayName="flows 3" isoptional="1">
@@ -35,6 +37,7 @@
         <description>Flows for decision maker 3.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
+      <dep>(nbEntries:value>=3)</dep>
     </input>
 
     <input id="flows_4" name="flows_4" displayName="flows 4" isoptional="1">
@@ -42,6 +45,7 @@
         <description>Flows for decision maker 4.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
+      <dep>(nbEntries:value>=4)</dep>
     </input>
 
     <input id="flows_5" name="flows_5" displayName="flows 5" isoptional="1">
@@ -49,6 +53,7 @@
         <description>Flows for decision maker 5.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
+      <dep>(nbEntries:value>=5)</dep>
     </input>
 
     <input id="flows_6" name="flows_6" displayName="flows 6" isoptional="1">
@@ -56,6 +61,7 @@
         <description>Flows for decision maker 6.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
+      <dep>(nbEntries:value>=6)</dep>
     </input>
 
     <input id="flows_7" name="flows_7" displayName="flows 7" isoptional="1">
@@ -63,6 +69,7 @@
         <description>Flows for decision maker 7.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
+      <dep>(nbEntries:value>=7)</dep>
     </input>
 
     <input id="flows_8" name="flows_8" displayName="flows 8" isoptional="1">
@@ -86,141 +93,198 @@
       <xmcda tag="alternativesValues" />
     </input>
 
+    <input id="nbDM" name="nbDM" displayName="Number of decision makers" isoptional="0">
+      <documentation>
+        <description>Number of decision makers (2-10)</description>
+      </documentation>
+      <xmcda tag="parameter">%1</xmcda>
+      <gui status="alwaysGUI">
+        <entry id="%1" type="int" displayName="Number of decision makers">
+          <documentation />
+          <xmcda tag=""/>
+          <constraint>
+            <description>An integer value between 2 and 10 (inclusive).</description>
+            <code><![CDATA[ %1 >= 2 && %1 <= 10 ]]></code>
+          </constraint>
+          <defaultValue>2</defaultValue>
+        </entry>
+      </gui>
+    </input>
+
     <input id="method_parameters" name="method_parameters" displayName="method parameters" isoptional="0">
       <documentation>
         <description>A set of parameters provided to tune up the module's operation.</description>
       </documentation>
       <xmcda tag="methodParameters"><![CDATA[
-        
+
                 <methodParameters>
-                    <parameter id="decisionMaker1">
-                        <value>
-                            <real>%1</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker2">
-                        <value>
-                            <real>%2</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker3">
-                        <value>
-                            <real>%3</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker4">
-                        <value>
-                            <real>%4</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker5">
-                        <value>
-                            <real>%5</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker6">
-                        <value>
-                            <real>%6</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker7">
-                        <value>
-                            <real>%7</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker8">
-                        <value>
-                            <real>%8</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker9">
-                        <value>
-                            <real>%9</real>
-                        </value>
-                    </parameter>
-                    <parameter id="decisionMaker10">
-                        <value>
-                            <real>%10</real>
-                        </value>
-                    </parameter>
+                    %1
+                    %2
+                    %3
+                    %4
+                    %5
+                    %6
+                    %7
+                    %8
+                    %9
+                    %10
                 </methodParameters>
-	        
+
       ]]></xmcda>
       <gui status="preferGUI">
         <entry id="%1" type="float" displayName="decision maker 1 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker1">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value.</description>
             <code><![CDATA[ %1 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%2" type="float" displayName="decision maker 2 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker2">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value.</description>
             <code><![CDATA[ %2 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%3" type="float" displayName="decision maker 3 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker3">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %3 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%4" type="float" displayName="decision maker 4 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker4">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %4 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%5" type="float" displayName="decision maker 5 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker5">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %5 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%6" type="float" displayName="decision maker 6 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker6">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %6 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%7" type="float" displayName="decision maker 7 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker7">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %7 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%8" type="float" displayName="decision maker 8 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker8">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %8 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%9" type="float" displayName="decision maker 9 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker9">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %9 >= 0 ]]></code>
           </constraint>
           <defaultValue>0.0</defaultValue>
         </entry>
+
         <entry id="%10" type="float" displayName="decision maker 10 weight">
           <documentation />
+          <xmcda tag="parameter"><![CDATA[
+                    <parameter id="decisionMaker10">
+                        <value>
+                            <real>%s</real>
+                        </value>
+                    </parameter>
+]]></xmcda>
           <constraint>
             <description>An integer value. Choose 0.0 when decision maker does not exist.</description>
             <code><![CDATA[ %10 >= 0 ]]></code>
