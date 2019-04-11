@@ -11,21 +11,21 @@
 
     <input id="input1" name="alternatives" displayName="alternatives" isoptional="0">
       <documentation>
-        <description>Alternatives which will be considered.</description>
+        <description>Alternatives to consider.</description>
       </documentation>
       <xmcda tag="alternatives" />
     </input>
 
     <input id="input2" name="positive_flow" displayName="positive flows" isoptional="0">
       <documentation>
-        <description>Positive outranking flows.</description>
+        <description>Positive flows of given alternatives and profiles.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
 
     <input id="input3" name="negative_flow" displayName="negative flows" isoptional="0">
       <documentation>
-        <description>Negative outranking flows.</description>
+        <description>Negative flows of given alternatives and profiles.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </input>
@@ -78,7 +78,7 @@
 
     <output id="output1" name="flows" displayName="flows">
       <documentation>
-        <description>Final flows computed from the given data.</description>
+        <description>Result computed from the given data.</description>
       </documentation>
       <xmcda tag="alternativesValues" />
     </output>

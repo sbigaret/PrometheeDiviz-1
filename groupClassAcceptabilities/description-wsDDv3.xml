@@ -6,16 +6,16 @@
     <contact><![CDATA[Magdalena Dziecielska <magdalenadziecielska6@gmail.com>]]></contact>
     <url>https://github.com/MagdalenaDziecielska/PrometheeDiviz</url>
     <reference>
-		  S. Damart, L.C. Dias and V. Mousseau; Supporting groups in sorting
-		  decisions: Methodology and use of a multi-criteria aggregation/disaggregation DSS.;
-		  Decision Support Systems 43 (2007) 1464?1475
-	  </reference>
+      S. Damart, L.C. Dias and V. Mousseau; Supporting groups in sorting
+      decisions: Methodology and use of a multi-criteria aggregation/disaggregation DSS.;
+      Decision Support Systems 43 (2007) 1464?1475
+    </reference>
   </documentation>
   <parameters>
 
     <input id="input1" name="alternatives" displayName="alternatives" isoptional="0">
       <documentation>
-        <description>Alternatives which will be considered.</description>
+        <description>Alternatives to consider.</description>
       </documentation>
       <xmcda tag="alternatives" />
     </input>
